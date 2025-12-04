@@ -1,0 +1,4 @@
+crawl4ai
+agentql
+python-dotenv
+playwright
