@@ -8,9 +8,9 @@ log = logging.getLogger(__name__)
 
 URL = "https://www.in.betmgm.com/en/sports/events/golden-state-warriors-at-philadelphia-76ers-18570747?market=Players:Rebound"
 
-QUERY = r"""
+QUERY = """
 {
-    player_rebound_over_under[] {
+    player_rebounds_over_under[] {
         player_name
         rebounds_line
         odds_over
@@ -34,18 +34,16 @@ def main():
         # Run AgentQL Query
         result = aql_page.query_data(QUERY)
 
-        markets = result.get("markets", [])
+        players = result.get("player_rebounds_over_under", [])
 
         # Build CSV rows
         rows_out = []
-        for market in markets:
-            for row in market.get("rows", []):
+        for player in players:
                 rows_out.append({
-                    "market_title": market.get("title"),
-                    "player_name": row.get("player_name"),
-                    "rebounds_line": row.get("rebounds_line"),
-                    "odds_over": row.get("odds_over"),
-                    "odds_under": row.get("odds_under"),
+                    "player_name": player.get("player_name"),
+                    "rebounds_line": player.get("rebounds_line"),
+                    "odds_over": player.get("odds_over"),
+                    "odds_under": player.get("odds_under"), 
                 })
 
         # Save CSV
@@ -53,7 +51,7 @@ def main():
         with open(output_file, "w", newline="") as f:
             writer = csv.DictWriter(
                 f,
-                fieldnames=["market_title", "player_name", "rebounds_line", "odds_over", "odds_under"]
+                fieldnames=["player_name", "rebounds_line", "odds_over", "odds_under"]
             )
             writer.writeheader()
             writer.writerows(rows_out)
