@@ -1,0 +1,604 @@
+game,market,player,line,odds_over,odds_under
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Nicolas Claxton,8.5,-105,-130
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Michael Porter Jr.,7.5,100,-135
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Saddiq Bey,6.5,-105,-130
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Derik Queen,6.5,-145,105
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Trey Murphy III,5.5,-150,115
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Yves Missi,5.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Noah Clowney,4.5,-110,-120
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,D. Wolf,4.5,-135,100
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Terance Mann,3.5,115,-150
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Jeremiah Fears,3.5,-145,105
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Jose Alvarado,2.5,-118,-115
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Ziaire Williams,2.5,-110,-118
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Egor Demin,2.5,-155,120
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Tyrese Martin,2.5,100,-130
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,M. Peavy,2.5,105,-140
+new-orleans-pelicans-at-brooklyn-nets,rebounds ou,Jordan Hawkins,1.5,-175,135
+sacramento-kings-at-miami-heat,rebounds ou,Kel‘el Ware,10.5,-118,-115
+sacramento-kings-at-miami-heat,rebounds ou,Bam Adebayo,10.5,120,-160
+sacramento-kings-at-miami-heat,rebounds ou,Keegan Murray,7.5,100,-135
+sacramento-kings-at-miami-heat,rebounds ou,Russell Westbrook,7.5,-105,-125
+sacramento-kings-at-miami-heat,rebounds ou,M. Raynaud,5.5,100,-130
+sacramento-kings-at-miami-heat,rebounds ou,Precious Achiuwa,5.5,-110,-120
+sacramento-kings-at-miami-heat,rebounds ou,Jaime Jaquez Jr.,5.5,110,-150
+sacramento-kings-at-miami-heat,rebounds ou,Andrew Wiggins,4.5,-155,120
+sacramento-kings-at-miami-heat,rebounds ou,Drew Eubanks,3.5,110,-145
+sacramento-kings-at-miami-heat,rebounds ou,Malik Monk,2.5,-130,-105
+sacramento-kings-at-miami-heat,rebounds ou,Davion Mitchell,2.5,-130,-105
+sacramento-kings-at-miami-heat,rebounds ou,Zach LaVine,2.5,-185,135
+sacramento-kings-at-miami-heat,rebounds ou,Norman Powell,2.5,-175,130
+sacramento-kings-at-miami-heat,rebounds ou,Demar DeRozan,2.5,-185,135
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Evan Mobley,9.5,-140,105
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Jaylon Tyson,5.5,-145,110
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Draymond Green,5.5,-155,115
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Jimmy Butler,5.5,-140,105
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Brandin Podziemski,4.5,-150,110
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Jonathan Kuminga,4.5,-125,-105
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Quinten Post,4.5,-140,105
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Donovan Mitchell,4.5,-135,100
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,De'Andre Hunter,3.5,-140,105
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Dean Wade,3.5,-155,115
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Moses Moody,2.5,-160,120
+golden-state-warriors-at-cleveland-cavaliers,rebounds ou,Darius Garland,2.5,-115,-115
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Jalen Duren,11.5,-120,-110
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Bobby Portis,6.5,100,-130
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Cade Cunningham,6.5,105,-140
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Jericho Sims,6.5,-125,-105
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Isaiah Stewart,5.5,-125,-105
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Ausar Thompson,5.5,100,-130
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Myles Turner,5.5,-155,115
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Ryan Rollins,4.5,110,-145
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Kevin Porter Jr.,4.5,-110,-118
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Tobias Harris,4.5,-130,-105
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Kyle Kuzma,4.5,105,-140
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Ron Holland,3.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Duncan Robinson,2.5,-105,-125
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Caris Levert,2.5,-135,100
+milwaukee-bucks-at-detroit-pistons,rebounds ou,AJ Green,2.5,-140,105
+milwaukee-bucks-at-detroit-pistons,rebounds ou,Gary Trent Jr.,1.5,100,-130
+houston-rockets-at-dallas-mavericks,rebounds ou,Anthony Davis,11.5,+105,-140
+houston-rockets-at-dallas-mavericks,rebounds ou,Amen Thompson,7.5,-125,-105
+houston-rockets-at-dallas-mavericks,rebounds ou,P.J. Washington,6.5,+110,-145
+houston-rockets-at-dallas-mavericks,rebounds ou,Cooper Flagg,6.5,+110,-145
+houston-rockets-at-dallas-mavericks,rebounds ou,Jabari Smith Jr,6.5,-120,-110
+houston-rockets-at-dallas-mavericks,rebounds ou,Kevin Durant,5.5,+105,-140
+houston-rockets-at-dallas-mavericks,rebounds ou,Naji Marshall,4.5,-120,-110
+houston-rockets-at-dallas-mavericks,rebounds ou,Josh Okogie,3.5,+115,-155
+houston-rockets-at-dallas-mavericks,rebounds ou,Reed Sheppard,3.5,-105,-125
+houston-rockets-at-dallas-mavericks,rebounds ou,Max Christie,2.5,-130,-105
+houston-rockets-at-dallas-mavericks,rebounds ou,Klay Thompson,2.5,+115,-155
+houston-rockets-at-dallas-mavericks,rebounds ou,Aaron Holiday,1.5,-190,+140
+houston-rockets-at-dallas-mavericks,rebounds ou,D'Angelo Russell,1.5,-140,+105
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Ivica Zubac,10.5,-125,-105
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Rudy Gobert,9.5,-150,+110
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Julius Randle,7.5,+115,-155
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Naz Reid,6.5,+135,-185
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,John Collins,5.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Anthony Edwards,4.5,-140,+105
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Jaden McDaniels,4.5,+105,-140
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,James Harden,4.5,-150,+115
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Kawhi Leonard,4.5,-150,+110
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Donte DiVincenzo,3.5,-145,+105
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Nicolas Batum,3.5,+130,-175
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Kris Dunn,2.5,-125,-105
+los-angeles-clippers-at-minnesota-timberwolves,rebounds ou,Mike Conley Jr.,1.5,+115,-155
+atlanta-hawks-at-washington-wizards,rebounds ou,Jalen Johnson,10.5,-145,105
+atlanta-hawks-at-washington-wizards,rebounds ou,Onyeka Okongwu,8.5,100,-135
+atlanta-hawks-at-washington-wizards,rebounds ou,Marvin Bagley III,7.5,-115,-118
+atlanta-hawks-at-washington-wizards,rebounds ou,Dyson Daniels,6.5,100,-135
+atlanta-hawks-at-washington-wizards,rebounds ou,Kyshawn George,5.5,-130,-105
+atlanta-hawks-at-washington-wizards,rebounds ou,Khris Middleton,4.5,125,-165
+atlanta-hawks-at-washington-wizards,rebounds ou,Mouhamed Gueye,4.5,-145,110
+atlanta-hawks-at-washington-wizards,rebounds ou,CJ McCollum,3.5,120,-160
+atlanta-hawks-at-washington-wizards,rebounds ou,Nickeil Alexander-Walker,3.5,-115,-115
+atlanta-hawks-at-washington-wizards,rebounds ou,Zaccharie Risacher,3.5,125,-165
+atlanta-hawks-at-washington-wizards,rebounds ou,Luke Kennard,2.5,125,-165
+atlanta-hawks-at-washington-wizards,rebounds ou,Vit Krejci,2.5,-150,110
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Darius Garland,6.5,-115,-115
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Draymond Green,5.5,-110,-118
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Donovan Mitchell,5.5,-160,120
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Evan Mobley,4.5,115,-155
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Jimmy Butler,4.5,-160,120
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Brandin Podziemski,3.5,120,-160
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Moses Moody,1.5,-135,100
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Jonathan Kuminga,1.5,-155,115
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Jaylon Tyson,1.5,-135,100
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Quinten Post,1.5,-110,-120
+golden-state-warriors-at-cleveland-cavaliers,assists ou,De'Andre Hunter,1.5,-145,110
+golden-state-warriors-at-cleveland-cavaliers,assists ou,Dean Wade,1.5,115,-155
+sacramento-kings-at-miami-heat,assists ou,Russell Westbrook,7.5,+100,-135
+sacramento-kings-at-miami-heat,assists ou,Davion Mitchell,7.5,-140,+105
+sacramento-kings-at-miami-heat,assists ou,Jaime Jaquez Jr.,4.5,-145,+110
+sacramento-kings-at-miami-heat,assists ou,Demar DeRozan,3.5,-115,-115
+sacramento-kings-at-miami-heat,assists ou,Malik Monk,3.5,-140,+105
+sacramento-kings-at-miami-heat,assists ou,Andrew Wiggins,3.5,+165,-225
+sacramento-kings-at-miami-heat,assists ou,Norman Powell,2.5,+110,-150
+sacramento-kings-at-miami-heat,assists ou,Bam Adebayo,2.5,-185,+135
+sacramento-kings-at-miami-heat,assists ou,Zach LaVine,2.5,-130,+100
+sacramento-kings-at-miami-heat,assists ou,M. Raynaud,1.5,+130,-175
+sacramento-kings-at-miami-heat,assists ou,Keegan Murray,1.5,-110,-120
+sacramento-kings-at-miami-heat,assists ou,Precious Achiuwa,1.5,+170,-235
+sacramento-kings-at-miami-heat,assists ou,Drew Eubanks,0.5,+130,-175
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,James Harden,8.5,+105,-140
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Julius Randle,5.5,-105,-125
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Anthony Edwards,4.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Donte DiVincenzo,3.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Naz Reid,2.5,-130,-105
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Ivica Zubac,2.5,-115,-118
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Kawhi Leonard,2.5,-145,+110
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Mike Conley Jr.,2.5,-120,-110
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Kris Dunn,2.5,-118,-110
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Rudy Gobert,1.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,Nicolas Batum,0.5,-185,+135
+los-angeles-clippers-at-minnesota-timberwolves,assists ou,John Collins,0.5,+100,-135
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Derik Queen,4.5,115.0,-155.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Nicolas Claxton,4.5,125.0,-165.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Egor Demin,4.5,100.0,-135.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Trey Murphy III,3.5,-145.0,110.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Jose Alvarado,3.5,110.0,-150.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Terance Mann,3.5,-105.0,-125.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Jeremiah Fears,3.5,-135.0,100.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,D. Wolf,3.5,150.0,-200.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Saddiq Bey,2.5,100.0,-135.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Noah Clowney,2.5,135.0,-185.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Michael Porter Jr.,2.5,-165.0,125.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Tyrese Martin,2.5,-110.0,-120.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Yves Missi,1.5,165.0,-220.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,M. Peavy,1.5,175.0,-235.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Ziaire Williams,0.5,-225.0,165.0
+new-orleans-pelicans-at-brooklyn-nets,assists ou,Jordan Hawkins,0.5,-155.0,115.0
+milwaukee-bucks-at-detroit-pistons,assists ou,Cade Cunningham,8.5,-125,-105
+milwaukee-bucks-at-detroit-pistons,assists ou,Kevin Porter Jr.,6.5,-110,-118
+milwaukee-bucks-at-detroit-pistons,assists ou,Ryan Rollins,5.5,+100,-130
+milwaukee-bucks-at-detroit-pistons,assists ou,Ausar Thompson,2.5,-105,-130
+milwaukee-bucks-at-detroit-pistons,assists ou,Caris Levert,2.5,-145,+110
+milwaukee-bucks-at-detroit-pistons,assists ou,Tobias Harris,2.5,+145,-190
+milwaukee-bucks-at-detroit-pistons,assists ou,Kyle Kuzma,2.5,+110,-150
+milwaukee-bucks-at-detroit-pistons,assists ou,AJ Green,2.5,+145,-200
+milwaukee-bucks-at-detroit-pistons,assists ou,Jalen Duren,1.5,-145,+110
+milwaukee-bucks-at-detroit-pistons,assists ou,Bobby Portis,1.5,+120,-160
+milwaukee-bucks-at-detroit-pistons,assists ou,Duncan Robinson,1.5,-150,+110
+milwaukee-bucks-at-detroit-pistons,assists ou,Myles Turner,1.5,+155,-210
+milwaukee-bucks-at-detroit-pistons,assists ou,Gary Trent Jr.,1.5,+105,-145
+milwaukee-bucks-at-detroit-pistons,assists ou,Jericho Sims,1.5,+120,-160
+milwaukee-bucks-at-detroit-pistons,assists ou,Ron Holland,1.5,+120,-160
+milwaukee-bucks-at-detroit-pistons,assists ou,Isaiah Stewart,0.5,-210,+150
+houston-rockets-at-dallas-mavericks,assists ou,Amen Thompson,6.5,-118,-115
+houston-rockets-at-dallas-mavericks,assists ou,Kevin Durant,4.5,-120,-110
+houston-rockets-at-dallas-mavericks,assists ou,Anthony Davis,3.5,-105,-130
+houston-rockets-at-dallas-mavericks,assists ou,Reed Sheppard,3.5,-110,-120
+houston-rockets-at-dallas-mavericks,assists ou,Cooper Flagg,2.5,-135,100
+houston-rockets-at-dallas-mavericks,assists ou,Aaron Holiday,2.5,120,-160
+houston-rockets-at-dallas-mavericks,assists ou,Jabari Smith Jr,2.5,145,-200
+houston-rockets-at-dallas-mavericks,assists ou,D'Angelo Russell,2.5,-140,105
+houston-rockets-at-dallas-mavericks,assists ou,Max Christie,1.5,-140,105
+houston-rockets-at-dallas-mavericks,assists ou,Josh Okogie,1.5,105,-145
+houston-rockets-at-dallas-mavericks,assists ou,P.J. Washington,1.5,100,-130
+houston-rockets-at-dallas-mavericks,assists ou,Naji Marshall,1.5,-200,145
+houston-rockets-at-dallas-mavericks,assists ou,Klay Thompson,0.5,-210,155
+atlanta-hawks-at-washington-wizards,assists ou,Jalen Johnson,8.5,-105,-130
+atlanta-hawks-at-washington-wizards,assists ou,Dyson Daniels,6.5,+105,-140
+atlanta-hawks-at-washington-wizards,assists ou,Kyshawn George,4.5,-125,-105
+atlanta-hawks-at-washington-wizards,assists ou,CJ McCollum,3.5,-135,+100
+atlanta-hawks-at-washington-wizards,assists ou,Nickeil Alexander-Walker,3.5,-130,-105
+atlanta-hawks-at-washington-wizards,assists ou,Khris Middleton,3.5,-155,+115
+atlanta-hawks-at-washington-wizards,assists ou,Onyeka Okongwu,3.5,+135,-175
+atlanta-hawks-at-washington-wizards,assists ou,Luke Kennard,2.5,+115,-155
+atlanta-hawks-at-washington-wizards,assists ou,Vit Krejci,2.5,+115,-155
+atlanta-hawks-at-washington-wizards,assists ou,Zaccharie Risacher,1.5,+100,-130
+atlanta-hawks-at-washington-wizards,assists ou,Marvin Bagley III,1.5,-105,-125
+atlanta-hawks-at-washington-wizards,assists ou,Mouhamed Gueye,0.5,-110,-120
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Derik Queen,26.5,-110,-120
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Nicolas Claxton,27.5,-105,-130
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Saddiq Bey,26.5,-118,-110
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Noah Clowney,23.5,-115,-115
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Trey Murphy III,31.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Terance Mann,15.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Egor Demin,15.5,-130,100
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Jordan Hawkins,9.5,-120,-110
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Jeremiah Fears,24.5,-120,-110
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Jose Alvarado,15.5,-105,-130
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,D. Wolf,19.5,100,-135
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Tyrese Martin,12.5,-115,-118
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Yves Missi,12.5,-130,-105
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,M. Peavy,8.5,-125,-105
+new-orleans-pelicans-at-brooklyn-nets,points rebounds assists,Ziaire Williams,12.5,-130,-105
+houston-rockets-at-dallas-mavericks,points rebounds assists,Max Christie,13.5,-135.0,100.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Anthony Davis,33.5,-120.0,-110.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Josh Okogie,11.5,-125.0,-105.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,P.J. Washington,21.5,-105.0,-125.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Cooper Flagg,25.5,-120.0,-110.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Klay Thompson,13.5,-130.0,100.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Reed Sheppard,19.5,-110.0,-118.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Jabari Smith Jr,24.5,-105.0,-125.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Amen Thompson,34.5,-110.0,-118.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Aaron Holiday,15.5,-110.0,-120.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,D'Angelo Russell,13.5,-110.0,-125.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Naji Marshall,16.5,-175.0,135.0
+houston-rockets-at-dallas-mavericks,points rebounds assists,Kevin Durant,37.5,-120.0,-110.0
+sacramento-kings-at-miami-heat,points rebounds assists,Andrew Wiggins,24.5,-118,-110
+sacramento-kings-at-miami-heat,points rebounds assists,Norman Powell,30.5,-115,-115
+sacramento-kings-at-miami-heat,points rebounds assists,Demar DeRozan,24.5,-115,-115
+sacramento-kings-at-miami-heat,points rebounds assists,Drew Eubanks,8.5,100,-135
+sacramento-kings-at-miami-heat,points rebounds assists,Zach LaVine,25.5,-120,-110
+sacramento-kings-at-miami-heat,points rebounds assists,Precious Achiuwa,14.5,-105,-130
+sacramento-kings-at-miami-heat,points rebounds assists,Malik Monk,21.5,-110,-118
+sacramento-kings-at-miami-heat,points rebounds assists,Kel‘el Ware,23.5,-118,-115
+sacramento-kings-at-miami-heat,points rebounds assists,Bam Adebayo,33.5,-125,-110
+sacramento-kings-at-miami-heat,points rebounds assists,Russell Westbrook,28.5,-125,-110
+sacramento-kings-at-miami-heat,points rebounds assists,Keegan Murray,25.5,-130,-105
+sacramento-kings-at-miami-heat,points rebounds assists,M. Raynaud,17.5,-115,-115
+sacramento-kings-at-miami-heat,points rebounds assists,Davion Mitchell,19.5,-125,-110
+sacramento-kings-at-miami-heat,points rebounds assists,Jaime Jaquez Jr.,25.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Tobias Harris,21.5,-110,-118
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Kevin Porter Jr.,31.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Isaiah Stewart,14.5,-118,-115
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Gary Trent Jr.,12.5,-125,-105
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Myles Turner,19.5,-125,-105
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Bobby Portis,19.5,-125,-105
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Jericho Sims,11.5,-135,100
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Cade Cunningham,42.5,-120,-110
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Ryan Rollins,29.5,-120,-110
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,AJ Green,16.5,-118,-110
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Kyle Kuzma,20.5,-118,-110
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Duncan Robinson,15.5,-130,100
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Ron Holland,11.5,-125,-105
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Caris Levert,14.5,-115,-118
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Jalen Duren,33.5,110,-150
+milwaukee-bucks-at-detroit-pistons,points rebounds assists,Ausar Thompson,19.5,100,-130
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Quinten Post,14.5,-125,-105
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Evan Mobley,32.5,-105,-125
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,De'Andre Hunter,20.5,-105,-130
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Darius Garland,26.5,-110,-120
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Dean Wade,10.5,-125,-110
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Jaylon Tyson,20.5,-125,-105
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Draymond Green,21.5,-125,-105
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Jonathan Kuminga,20.5,-110,-118
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Brandin Podziemski,20.5,-160,120
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Moses Moody,16.5,-118,-110
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Jimmy Butler,31.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,points rebounds assists,Donovan Mitchell,39.5,-125,-105
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Anthony Edwards,39.5,-115,-115
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Donte DiVincenzo,21.5,-115,-115
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Mike Conley Jr.,8.5,-115,-118
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,James Harden,38.5,-105,-125
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Jaden McDaniels,20.5,-110,-118
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Rudy Gobert,21.5,-115,-115
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Julius Randle,33.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Naz Reid,23.5,-105,-125
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Nicolas Batum,8.5,-120,-110
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Ivica Zubac,27.5,-118,-115
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Kawhi Leonard,30.5,-118,-110
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,John Collins,18.5,-130,-105
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds assists,Kris Dunn,11.5,-110,-118
+atlanta-hawks-at-washington-wizards,points rebounds assists,CJ McCollum,27.5,-110,-118
+atlanta-hawks-at-washington-wizards,points rebounds assists,Nickeil Alexander-Walker,28.5,-118,-115
+atlanta-hawks-at-washington-wizards,points rebounds assists,Dyson Daniels,25.5,-115,-118
+atlanta-hawks-at-washington-wizards,points rebounds assists,Zaccharie Risacher,16.5,-110,-118
+atlanta-hawks-at-washington-wizards,points rebounds assists,Vit Krejci,14.5,-115,-115
+atlanta-hawks-at-washington-wizards,points rebounds assists,Khris Middleton,20.5,-125,-105
+atlanta-hawks-at-washington-wizards,points rebounds assists,Mouhamed Gueye,12.5,-105,-125
+atlanta-hawks-at-washington-wizards,points rebounds assists,Marvin Bagley III,23.5,-105,-125
+atlanta-hawks-at-washington-wizards,points rebounds assists,Luke Kennard,12.5,-110,-120
+atlanta-hawks-at-washington-wizards,points rebounds assists,Onyeka Okongwu,30.5,-115,-115
+atlanta-hawks-at-washington-wizards,points rebounds assists,Jalen Johnson,46.5,+120,-155
+atlanta-hawks-at-washington-wizards,points rebounds assists,Kyshawn George,25.5,-125,-105
+houston-rockets-at-dallas-mavericks,points rebounds,Anthony Davis,30.5,-115,-118
+houston-rockets-at-dallas-mavericks,points rebounds,P.J. Washington,19.5,-120,-110
+houston-rockets-at-dallas-mavericks,points rebounds,Josh Okogie,10.5,-105,-130
+houston-rockets-at-dallas-mavericks,points rebounds,Amen Thompson,27.5,-105,-125
+houston-rockets-at-dallas-mavericks,points rebounds,Max Christie,12.5,-105,-130
+houston-rockets-at-dallas-mavericks,points rebounds,Kevin Durant,32.5,-120,-110
+houston-rockets-at-dallas-mavericks,points rebounds,Cooper Flagg,22.5,-120,-110
+houston-rockets-at-dallas-mavericks,points rebounds,Jabari Smith Jr,22.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,points rebounds,Derik Queen,21.5,-120,-110
+new-orleans-pelicans-at-brooklyn-nets,points rebounds,Nicolas Claxton,22.5,-140,105
+new-orleans-pelicans-at-brooklyn-nets,points rebounds,Saddiq Bey,24.5,-110,-125
+new-orleans-pelicans-at-brooklyn-nets,points rebounds,Trey Murphy III,27.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,points rebounds,Terance Mann,11.5,-110,-120
+new-orleans-pelicans-at-brooklyn-nets,points rebounds,Egor Demin,11.5,-115,-118
+new-orleans-pelicans-at-brooklyn-nets,points rebounds,Jeremiah Fears,20.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,points rebounds,Michael Porter Jr.,33.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,points rebounds,Noah Clowney,21.5,-110,-118
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,Brandin Podziemski,17.5,-110,-120
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,Quinten Post,13.5,-105,-125
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,Evan Mobley,27.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,De'Andre Hunter,18.5,-118,-110
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,Darius Garland,19.5,-110,-118
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,Jaylon Tyson,19.5,-105,-125
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,Jimmy Butler,26.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,Moses Moody,14.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,Donovan Mitchell,33.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,points rebounds,Draymond Green,15.5,-130,100
+sacramento-kings-at-miami-heat,points rebounds,Andrew Wiggins,21.5,-110,-118
+sacramento-kings-at-miami-heat,points rebounds,Norman Powell,27.5,-125,-105
+sacramento-kings-at-miami-heat,points rebounds,Bam Adebayo,30.5,-118,-115
+sacramento-kings-at-miami-heat,points rebounds,Demar DeRozan,20.5,-118,-110
+sacramento-kings-at-miami-heat,points rebounds,M. Raynaud,16.5,-105,-130
+sacramento-kings-at-miami-heat,points rebounds,Keegan Murray,24.5,-115,-115
+sacramento-kings-at-miami-heat,points rebounds,Zach LaVine,22.5,-125,-105
+sacramento-kings-at-miami-heat,points rebounds,Davion Mitchell,11.5,-120,-110
+sacramento-kings-at-miami-heat,points rebounds,Russell Westbrook,20.5,-125,-110
+sacramento-kings-at-miami-heat,points rebounds,Kel‘el Ware,22.5,-115,-115
+milwaukee-bucks-at-detroit-pistons,points rebounds,Ryan Rollins,24.5,-110,-118
+milwaukee-bucks-at-detroit-pistons,points rebounds,Gary Trent Jr.,11.5,-105,-125
+milwaukee-bucks-at-detroit-pistons,points rebounds,Tobias Harris,19.5,-105,-125
+milwaukee-bucks-at-detroit-pistons,points rebounds,Jalen Duren,31.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,points rebounds,Myles Turner,18.5,-118,-110
+milwaukee-bucks-at-detroit-pistons,points rebounds,Jericho Sims,10.5,-115,-118
+milwaukee-bucks-at-detroit-pistons,points rebounds,Kevin Porter Jr.,24.5,-115,-115
+milwaukee-bucks-at-detroit-pistons,points rebounds,Cade Cunningham,33.5,-120,-110
+milwaukee-bucks-at-detroit-pistons,points rebounds,Ausar Thompson,16.5,-115,-118
+milwaukee-bucks-at-detroit-pistons,points rebounds,Duncan Robinson,14.5,-105,-130
+milwaukee-bucks-at-detroit-pistons,points rebounds,AJ Green,14.5,-105,-125
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,Donte DiVincenzo,17.5,-115,-115
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,Ivica Zubac,25.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,Jaden McDaniels,17.5,-125,-105
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,Kawhi Leonard,28.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,Julius Randle,27.5,-118,-110
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,Kris Dunn,9.5,100,-135
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,Rudy Gobert,19.5,-120,-110
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,Anthony Edwards,35.5,-105,-125
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,John Collins,18.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,points rebounds,James Harden,29.5,-115,-115
+atlanta-hawks-at-washington-wizards,points rebounds,CJ McCollum,23.5,-110,-120
+atlanta-hawks-at-washington-wizards,points rebounds,Nickeil Alexander-Walker,24.5,-118,-110
+atlanta-hawks-at-washington-wizards,points rebounds,Zaccharie Risacher,14.5,-120,-110
+atlanta-hawks-at-washington-wizards,points rebounds,Kyshawn George,21.5,-105,-125
+atlanta-hawks-at-washington-wizards,points rebounds,Marvin Bagley III,21.5,-110,-120
+atlanta-hawks-at-washington-wizards,points rebounds,Khris Middleton,16.5,-130,-105
+atlanta-hawks-at-washington-wizards,points rebounds,Dyson Daniels,18.5,-130,-105
+atlanta-hawks-at-washington-wizards,points rebounds,Onyeka Okongwu,27.5,-110,-120
+atlanta-hawks-at-washington-wizards,points rebounds,Jalen Johnson,37.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,points assists,Anthony Edwards,34.5,-118,-115
+los-angeles-clippers-at-minnesota-timberwolves,points assists,Donte DiVincenzo,17.5,-110,-125
+los-angeles-clippers-at-minnesota-timberwolves,points assists,Jaden McDaniels,15.5,-130,-105
+los-angeles-clippers-at-minnesota-timberwolves,points assists,Rudy Gobert,11.5,-115,-118
+los-angeles-clippers-at-minnesota-timberwolves,points assists,Julius Randle,26.5,-105,-125
+los-angeles-clippers-at-minnesota-timberwolves,points assists,Kawhi Leonard,25.5,-118,-115
+los-angeles-clippers-at-minnesota-timberwolves,points assists,Ivica Zubac,16.5,-120,-110
+los-angeles-clippers-at-minnesota-timberwolves,points assists,John Collins,13.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,points assists,James Harden,32.5,-120,-110
+los-angeles-clippers-at-minnesota-timberwolves,points assists,Kris Dunn,8.5,-145,110
+milwaukee-bucks-at-detroit-pistons,points assists,Cade Cunningham,36.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,points assists,Tobias Harris,16.5,-115,-115
+milwaukee-bucks-at-detroit-pistons,points assists,Gary Trent Jr.,11.5,-105,-130
+milwaukee-bucks-at-detroit-pistons,points assists,Jericho Sims,5.5,+105,-145
+milwaukee-bucks-at-detroit-pistons,points assists,Myles Turner,13.5,-118,-110
+milwaukee-bucks-at-detroit-pistons,points assists,Ryan Rollins,25.5,-115,-115
+milwaukee-bucks-at-detroit-pistons,points assists,AJ Green,13.5,-118,-110
+milwaukee-bucks-at-detroit-pistons,points assists,Kevin Porter Jr.,26.5,-115,-115
+milwaukee-bucks-at-detroit-pistons,points assists,Ausar Thompson,13.5,-115,-115
+milwaukee-bucks-at-detroit-pistons,points assists,Duncan Robinson,13.5,-105,-125
+milwaukee-bucks-at-detroit-pistons,points assists,Jalen Duren,21.5,-110,-118
+houston-rockets-at-dallas-mavericks,points assists,Anthony Davis,22.5,-105,-125
+houston-rockets-at-dallas-mavericks,points assists,Cooper Flagg,19.5,-110,-120
+houston-rockets-at-dallas-mavericks,points assists,Josh Okogie,8.5,-110,-118
+houston-rockets-at-dallas-mavericks,points assists,P.J. Washington,14.5,-130,+100
+houston-rockets-at-dallas-mavericks,points assists,Max Christie,11.5,-105,-125
+houston-rockets-at-dallas-mavericks,points assists,Jabari Smith Jr,17.5,-110,-118
+houston-rockets-at-dallas-mavericks,points assists,Amen Thompson,26.5,-125,-105
+houston-rockets-at-dallas-mavericks,points assists,Kevin Durant,32.5,-115,-115
+sacramento-kings-at-miami-heat,points assists,Andrew Wiggins,19.5,-115,-115
+sacramento-kings-at-miami-heat,points assists,Bam Adebayo,23.5,-115,-115
+sacramento-kings-at-miami-heat,points assists,Demar DeRozan,21.5,-110,-120
+sacramento-kings-at-miami-heat,points assists,Zach LaVine,22.5,-118,-115
+sacramento-kings-at-miami-heat,points assists,Russell Westbrook,21.5,-110,-120
+sacramento-kings-at-miami-heat,points assists,Davion Mitchell,17.5,+100,-130
+sacramento-kings-at-miami-heat,points assists,Keegan Murray,18.5,-120,-110
+sacramento-kings-at-miami-heat,points assists,Norman Powell,27.5,-110,-118
+sacramento-kings-at-miami-heat,points assists,M. Raynaud,11.5,-130,-105
+sacramento-kings-at-miami-heat,points assists,Kel‘el Ware,12.5,-125,-105
+new-orleans-pelicans-at-brooklyn-nets,points assists,Nicolas Claxton,18.5,-115,-115
+new-orleans-pelicans-at-brooklyn-nets,points assists,Saddiq Bey,20.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,points assists,Noah Clowney,18.5,-118,-115
+new-orleans-pelicans-at-brooklyn-nets,points assists,Terance Mann,11.5,-125,-105
+new-orleans-pelicans-at-brooklyn-nets,points assists,Michael Porter Jr.,28.5,-135,+105
+new-orleans-pelicans-at-brooklyn-nets,points assists,Egor Demin,12.5,-130,+100
+new-orleans-pelicans-at-brooklyn-nets,points assists,Jeremiah Fears,20.5,-118,-115
+new-orleans-pelicans-at-brooklyn-nets,points assists,Trey Murphy III,24.5,-125,-105
+new-orleans-pelicans-at-brooklyn-nets,points assists,Derik Queen,18.5,-130,-105
+golden-state-warriors-at-cleveland-cavaliers,points assists,Brandin Podziemski,16.5,100.0,-130.0
+golden-state-warriors-at-cleveland-cavaliers,points assists,Moses Moody,13.5,-118.0,-115.0
+golden-state-warriors-at-cleveland-cavaliers,points assists,Draymond Green,15.5,-118.0,-110.0
+golden-state-warriors-at-cleveland-cavaliers,points assists,Quinten Post,9.5,-130.0,100.0
+golden-state-warriors-at-cleveland-cavaliers,points assists,Evan Mobley,21.5,-125.0,-105.0
+golden-state-warriors-at-cleveland-cavaliers,points assists,De'Andre Hunter,16.5,-105.0,-130.0
+golden-state-warriors-at-cleveland-cavaliers,points assists,Darius Garland,23.5,-115.0,-118.0
+golden-state-warriors-at-cleveland-cavaliers,points assists,Jaylon Tyson,14.5,-120.0,-110.0
+golden-state-warriors-at-cleveland-cavaliers,points assists,Donovan Mitchell,34.5,-120.0,-110.0
+golden-state-warriors-at-cleveland-cavaliers,points assists,Jimmy Butler,25.5,-120.0,-110.0
+atlanta-hawks-at-washington-wizards,points assists,CJ McCollum,23.5,-125,-105
+atlanta-hawks-at-washington-wizards,points assists,Jalen Johnson,34.5,-120,-110
+atlanta-hawks-at-washington-wizards,points assists,Nickeil Alexander-Walker,24.5,-120,-110
+atlanta-hawks-at-washington-wizards,points assists,Kyshawn George,20.5,-110,-125
+atlanta-hawks-at-washington-wizards,points assists,Marvin Bagley III,15.5,-105,-125
+atlanta-hawks-at-washington-wizards,points assists,Khris Middleton,16.5,-118,-110
+atlanta-hawks-at-washington-wizards,points assists,Dyson Daniels,18.5,-130,100
+atlanta-hawks-at-washington-wizards,points assists,Zaccharie Risacher,13.5,-105,-130
+atlanta-hawks-at-washington-wizards,points assists,Onyeka Okongwu,22.5,-105,-125
+golden-state-warriors-at-cleveland-cavaliers,points ou,Donovan Mitchell,28.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,points ou,Jimmy Butler,20.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,points ou,Evan Mobley,17.5,-135,100
+golden-state-warriors-at-cleveland-cavaliers,points ou,Darius Garland,16.5,-118,-110
+golden-state-warriors-at-cleveland-cavaliers,points ou,De'Andre Hunter,14.5,-105,-125
+golden-state-warriors-at-cleveland-cavaliers,points ou,Jonathan Kuminga,13.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,points ou,Brandin Podziemski,12.5,-118,-110
+golden-state-warriors-at-cleveland-cavaliers,points ou,Jaylon Tyson,12.5,-130,-105
+golden-state-warriors-at-cleveland-cavaliers,points ou,Moses Moody,11.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,points ou,Draymond Green,9.5,-125,-105
+golden-state-warriors-at-cleveland-cavaliers,points ou,Quinten Post,8.5,-105,-130
+golden-state-warriors-at-cleveland-cavaliers,points ou,Dean Wade,5.5,100,-130
+houston-rockets-at-dallas-mavericks,points ou,Kevin Durant,27.5,-110,-120
+houston-rockets-at-dallas-mavericks,points ou,Anthony Davis,19.5,-110,-118
+houston-rockets-at-dallas-mavericks,points ou,Amen Thompson,19.5,-115,-115
+houston-rockets-at-dallas-mavericks,points ou,Cooper Flagg,16.5,-110,-120
+houston-rockets-at-dallas-mavericks,points ou,Jabari Smith Jr,15.5,-105,-125
+houston-rockets-at-dallas-mavericks,points ou,P.J. Washington,13.5,-110,-120
+houston-rockets-at-dallas-mavericks,points ou,Reed Sheppard,11.5,-120,-110
+houston-rockets-at-dallas-mavericks,points ou,Klay Thompson,10.5,-120,-110
+houston-rockets-at-dallas-mavericks,points ou,Aaron Holiday,10.5,-110,-120
+houston-rockets-at-dallas-mavericks,points ou,Max Christie,9.5,-105,-125
+houston-rockets-at-dallas-mavericks,points ou,Naji Marshall,9.5,-135,+100
+houston-rockets-at-dallas-mavericks,points ou,D'Angelo Russell,8.5,+105,-140
+houston-rockets-at-dallas-mavericks,points ou,Josh Okogie,6.5,-135,+100
+new-orleans-pelicans-at-brooklyn-nets,points ou,Michael Porter Jr.,25.5,-125,-105
+new-orleans-pelicans-at-brooklyn-nets,points ou,Trey Murphy III,20.5,-130,-105
+new-orleans-pelicans-at-brooklyn-nets,points ou,Saddiq Bey,17.5,-118,-115
+new-orleans-pelicans-at-brooklyn-nets,points ou,Jeremiah Fears,16.5,-118,-115
+new-orleans-pelicans-at-brooklyn-nets,points ou,Noah Clowney,16.5,-110,-120
+new-orleans-pelicans-at-brooklyn-nets,points ou,Derik Queen,14.5,-118,-110
+new-orleans-pelicans-at-brooklyn-nets,points ou,Nicolas Claxton,14.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,points ou,D. Wolf,10.5,-120,-110
+new-orleans-pelicans-at-brooklyn-nets,points ou,Ziaire Williams,9.5,-105,-130
+new-orleans-pelicans-at-brooklyn-nets,points ou,Jose Alvarado,9.5,100,-135
+new-orleans-pelicans-at-brooklyn-nets,points ou,Egor Demin,8.5,-110,-120
+new-orleans-pelicans-at-brooklyn-nets,points ou,Terance Mann,7.5,-135,100
+new-orleans-pelicans-at-brooklyn-nets,points ou,Tyrese Martin,7.5,-105,-125
+new-orleans-pelicans-at-brooklyn-nets,points ou,Jordan Hawkins,6.5,-120,-110
+new-orleans-pelicans-at-brooklyn-nets,points ou,Yves Missi,5.5,-145,110
+new-orleans-pelicans-at-brooklyn-nets,points ou,M. Peavy,5.5,105,-140
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Anthony Edwards,29.5,-125,-105
+los-angeles-clippers-at-minnesota-timberwolves,points ou,James Harden,24.5,-115,-115
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Kawhi Leonard,22.5,-125,-105
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Julius Randle,20.5,-115,-115
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Ivica Zubac,14.5,-105,-125
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Naz Reid,13.5,-125,-105
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Donte DiVincenzo,13.5,-118,-110
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Jaden McDaniels,13.5,-110,-118
+los-angeles-clippers-at-minnesota-timberwolves,points ou,John Collins,12.5,-120,-110
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Rudy Gobert,9.5,-130,-105
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Kris Dunn,6.5,-110,-120
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Nicolas Batum,4.5,-120,-110
+los-angeles-clippers-at-minnesota-timberwolves,points ou,Mike Conley Jr.,4.5,-110,-120
+sacramento-kings-at-miami-heat,points ou,Norman Powell,24.5,-118,-110
+sacramento-kings-at-miami-heat,points ou,Bam Adebayo,20.5,-110,-118
+sacramento-kings-at-miami-heat,points ou,Zach LaVine,19.5,-120,-110
+sacramento-kings-at-miami-heat,points ou,Demar DeRozan,17.5,-115,-118
+sacramento-kings-at-miami-heat,points ou,Keegan Murray,17.5,-105,-125
+sacramento-kings-at-miami-heat,points ou,Andrew Wiggins,16.5,-110,-120
+sacramento-kings-at-miami-heat,points ou,Malik Monk,14.5,-110,-118
+sacramento-kings-at-miami-heat,points ou,Jaime Jaquez Jr.,14.5,-120,-110
+sacramento-kings-at-miami-heat,points ou,Russell Westbrook,13.5,-110,-120
+sacramento-kings-at-miami-heat,points ou,Kel‘el Ware,11.5,-125,-110
+sacramento-kings-at-miami-heat,points ou,M. Raynaud,10.5,-115,-115
+sacramento-kings-at-miami-heat,points ou,Davion Mitchell,8.5,-140,105
+sacramento-kings-at-miami-heat,points ou,Precious Achiuwa,7.5,-110,-120
+sacramento-kings-at-miami-heat,points ou,Drew Eubanks,4.5,115,-155
+milwaukee-bucks-at-detroit-pistons,points ou,Cade Cunningham,27.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,points ou,Ryan Rollins,20.5,-105,-125
+milwaukee-bucks-at-detroit-pistons,points ou,Jalen Duren,19.5,-105,-125
+milwaukee-bucks-at-detroit-pistons,points ou,Kevin Porter Jr.,19.5,-120,-110
+milwaukee-bucks-at-detroit-pistons,points ou,Tobias Harris,14.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,points ou,Kyle Kuzma,13.5,-125,-105
+milwaukee-bucks-at-detroit-pistons,points ou,Myles Turner,12.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,points ou,Bobby Portis,11.5,-130,100
+milwaukee-bucks-at-detroit-pistons,points ou,AJ Green,11.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,points ou,Duncan Robinson,11.5,-110,-120
+milwaukee-bucks-at-detroit-pistons,points ou,Ausar Thompson,10.5,-135,100
+milwaukee-bucks-at-detroit-pistons,points ou,Gary Trent Jr.,9.5,-118,-115
+milwaukee-bucks-at-detroit-pistons,points ou,Caris Levert,8.5,-115,-115
+milwaukee-bucks-at-detroit-pistons,points ou,Isaiah Stewart,7.5,-115,-115
+milwaukee-bucks-at-detroit-pistons,points ou,Ron Holland,6.5,-130,-105
+milwaukee-bucks-at-detroit-pistons,points ou,Jericho Sims,3.5,-145,110
+atlanta-hawks-at-washington-wizards,points ou,Jalen Johnson,25.5,-105,-125
+atlanta-hawks-at-washington-wizards,points ou,Nickeil Alexander-Walker,20.5,-125,-110
+atlanta-hawks-at-washington-wizards,points ou,CJ McCollum,19.5,-130,-105
+atlanta-hawks-at-washington-wizards,points ou,Onyeka Okongwu,18.5,-125,-105
+atlanta-hawks-at-washington-wizards,points ou,Kyshawn George,15.5,-110,-118
+atlanta-hawks-at-washington-wizards,points ou,Marvin Bagley III,13.5,-115,-115
+atlanta-hawks-at-washington-wizards,points ou,Dyson Daniels,12.5,-115,-118
+atlanta-hawks-at-washington-wizards,points ou,Khris Middleton,12.5,-120,-110
+atlanta-hawks-at-washington-wizards,points ou,Zaccharie Risacher,11.5,-140,105
+atlanta-hawks-at-washington-wizards,points ou,Vit Krejci,9.5,100,-135
+atlanta-hawks-at-washington-wizards,points ou,Luke Kennard,7.5,-120,-110
+atlanta-hawks-at-washington-wizards,points ou,Mouhamed Gueye,6.5,-135,100
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Donovan Mitchell,3.5,-105,-130
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Moses Moody,2.5,145,-200
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Darius Garland,2.5,125,-165
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Brandin Podziemski,1.5,-150,110
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Draymond Green,1.5,-118,-110
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Jaylon Tyson,1.5,-160,120
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Quinten Post,1.5,-110,-118
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Evan Mobley,1.5,175,-235
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Dean Wade,1.5,160,-220
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,De'Andre Hunter,1.5,-200,145
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Jimmy Butler,0.5,-120,-110
+golden-state-warriors-at-cleveland-cavaliers,three pointers ou,Jonathan Kuminga,0.5,-200,150
+sacramento-kings-at-miami-heat,three pointers ou,Norman Powell,3.5,+130,-175
+sacramento-kings-at-miami-heat,three pointers ou,Keegan Murray,2.5,+120,-160
+sacramento-kings-at-miami-heat,three pointers ou,Zach LaVine,2.5,+100,-135
+sacramento-kings-at-miami-heat,three pointers ou,Andrew Wiggins,1.5,-135,+100
+sacramento-kings-at-miami-heat,three pointers ou,Bam Adebayo,1.5,+115,-155
+sacramento-kings-at-miami-heat,three pointers ou,Russell Westbrook,1.5,-115,-115
+sacramento-kings-at-miami-heat,three pointers ou,Malik Monk,1.5,-165,+125
+sacramento-kings-at-miami-heat,three pointers ou,Demar DeRozan,0.5,-145,+110
+sacramento-kings-at-miami-heat,three pointers ou,M. Raynaud,0.5,+135,-185
+sacramento-kings-at-miami-heat,three pointers ou,Precious Achiuwa,0.5,+200,-285
+sacramento-kings-at-miami-heat,three pointers ou,Kel‘el Ware,0.5,-125,-110
+sacramento-kings-at-miami-heat,three pointers ou,Davion Mitchell,0.5,-210,+150
+sacramento-kings-at-miami-heat,three pointers ou,Jaime Jaquez Jr.,0.5,+140,-190
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,Anthony Edwards,3.5,-145,+110
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,Donte DiVincenzo,3.5,+115,-155
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,Naz Reid,2.5,+130,-175
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,James Harden,2.5,-165,+125
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,Jaden McDaniels,1.5,+150,-200
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,Nicolas Batum,1.5,+145,-200
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,Julius Randle,1.5,-145,+110
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,Kawhi Leonard,1.5,-200,+145
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,Mike Conley Jr.,0.5,-200,+150
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,Kris Dunn,0.5,-190,+140
+los-angeles-clippers-at-minnesota-timberwolves,three pointers ou,John Collins,0.5,-190,+140
+houston-rockets-at-dallas-mavericks,three pointers ou,Klay Thompson,2.5,-120,-110
+houston-rockets-at-dallas-mavericks,three pointers ou,Reed Sheppard,2.5,135,-175
+houston-rockets-at-dallas-mavericks,three pointers ou,Aaron Holiday,2.5,165,-220
+houston-rockets-at-dallas-mavericks,three pointers ou,Max Christie,1.5,-120,-110
+houston-rockets-at-dallas-mavericks,three pointers ou,Jabari Smith Jr,1.5,-185,135
+houston-rockets-at-dallas-mavericks,three pointers ou,Kevin Durant,1.5,-160,120
+houston-rockets-at-dallas-mavericks,three pointers ou,D'Angelo Russell,1.5,-130,-105
+houston-rockets-at-dallas-mavericks,three pointers ou,Amen Thompson,0.5,140,-190
+houston-rockets-at-dallas-mavericks,three pointers ou,Anthony Davis,0.5,-135,100
+houston-rockets-at-dallas-mavericks,three pointers ou,Josh Okogie,0.5,-190,140
+houston-rockets-at-dallas-mavericks,three pointers ou,Cooper Flagg,0.5,-190,145
+houston-rockets-at-dallas-mavericks,three pointers ou,Naji Marshall,0.5,-190,140
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Michael Porter Jr.,3.5,-150,110
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Noah Clowney,2.5,-130,-105
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Trey Murphy III,2.5,-135,100
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Jose Alvarado,1.5,-160,120
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Ziaire Williams,1.5,-115,-115
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Egor Demin,1.5,-160,120
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Jordan Hawkins,1.5,145,-200
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Jeremiah Fears,1.5,180,-250
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Saddiq Bey,1.5,-175,135
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,D. Wolf,1.5,110,-145
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Tyrese Martin,1.5,115,-150
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Derik Queen,0.5,270,-400
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,Terance Mann,0.5,-210,155
+new-orleans-pelicans-at-brooklyn-nets,three pointers ou,M. Peavy,0.5,135,-185
+milwaukee-bucks-at-detroit-pistons,three pointers ou,AJ Green,3.5,130.0,-175.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Ryan Rollins,2.5,110.0,-150.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Duncan Robinson,2.5,-150.0,110.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Bobby Portis,1.5,110.0,-150.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Cade Cunningham,1.5,-165.0,125.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Caris Levert,1.5,145.0,-190.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Tobias Harris,1.5,110.0,-145.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Kyle Kuzma,1.5,145.0,-200.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Gary Trent Jr.,1.5,-155.0,115.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Myles Turner,1.5,-165.0,125.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Kevin Porter Jr.,1.5,-190.0,140.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Isaiah Stewart,0.5,-115.0,-115.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Ausar Thompson,0.5,310.0,-450.0
+milwaukee-bucks-at-detroit-pistons,three pointers ou,Ron Holland,0.5,-110.0,-120.0
+atlanta-hawks-at-washington-wizards,three pointers ou,Nickeil Alexander-Walker,3.5,+140,-190
+atlanta-hawks-at-washington-wizards,three pointers ou,CJ McCollum,2.5,-145,+105
+atlanta-hawks-at-washington-wizards,three pointers ou,Vit Krejci,2.5,+125,-165
+atlanta-hawks-at-washington-wizards,three pointers ou,Kyshawn George,2.5,+110,-145
+atlanta-hawks-at-washington-wizards,three pointers ou,Jalen Johnson,1.5,-155,+115
+atlanta-hawks-at-washington-wizards,three pointers ou,Luke Kennard,1.5,+100,-130
+atlanta-hawks-at-washington-wizards,three pointers ou,Zaccharie Risacher,1.5,-110,-125
+atlanta-hawks-at-washington-wizards,three pointers ou,Onyeka Okongwu,1.5,-165,+125
+atlanta-hawks-at-washington-wizards,three pointers ou,Khris Middleton,1.5,+175,-235
+atlanta-hawks-at-washington-wizards,three pointers ou,Dyson Daniels,0.5,-118,-115
+atlanta-hawks-at-washington-wizards,three pointers ou,Marvin Bagley III,0.5,+280,-400
+atlanta-hawks-at-washington-wizards,three pointers ou,Mouhamed Gueye,0.5,-115,-118

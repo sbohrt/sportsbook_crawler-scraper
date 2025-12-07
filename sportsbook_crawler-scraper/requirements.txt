@@ -1,4 +1,7 @@
-crawl4ai
+# Core scraping and automation libraries
 agentql
-python-dotenv
 playwright
+crawl4ai
+
+# Utilities
+python-dotenv

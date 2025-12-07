@@ -8,8 +8,8 @@ env/
 venv/
 ENV/
 .venv
+bqfg_playwright/
 *.log
 .env
-*.csv
 *.json
 
