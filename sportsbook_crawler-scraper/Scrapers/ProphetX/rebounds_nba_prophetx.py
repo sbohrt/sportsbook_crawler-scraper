@@ -107,7 +107,7 @@ def filter_nba_event_links(csv_file_path, nba_teams):
     
     return filtered_links
 
-def scrape_single_game(browser_config, URL, market, POINTS_OU_QUERY):
+def scrape_single_game(browser_config, URL, market, REBOUNDS_OU_QUERY):
     """
     Scrape a single game and return the rows for CSV.
     Each thread creates its own browser instance for thread safety.
@@ -116,7 +116,7 @@ def scrape_single_game(browser_config, URL, market, POINTS_OU_QUERY):
         browser_config: Dict with browser configuration
         URL: Game URL to scrape
         market: Market name
-        POINTS_OU_QUERY: AgentQL query
+    REBOUNDS_OU_QUERY: AgentQL query
     
     Returns:
         list: Rows of player props data
@@ -161,8 +161,8 @@ def scrape_single_game(browser_config, URL, market, POINTS_OU_QUERY):
             page.locator("body").press("Escape")
 
             # === SCRAPE MARKET USING AGENTQL ===
-            data = page.query_data(POINTS_OU_QUERY)
-            selections = data.get("points_ou", [])
+            data = page.query_data(REBOUNDS_OU_QUERY)
+            selections = data.get("rebounds_ou", [])
 
             # Build CSV rows for this game
             for sel in selections:
@@ -203,7 +203,7 @@ def main():
     filtered_links = filter_nba_event_links(csv_file_path, nba_teams)
     
     # Add query parameter to filtered links
-    filtered_links = [url + "?currency=cash&subType=player_total_points_milestones" for url in filtered_links]
+    filtered_links = [url + "?currency=cash&subType=player_total_rebounds_milestones" for url in filtered_links]
     
     log.info(f"Found {len(filtered_links)} NBA event links")
     
@@ -218,9 +218,9 @@ def main():
     log.info(f"Processing {len(filtered_links)} NBA games...")
     
     # Define the AgentQL query
-    POINTS_OU_QUERY = """
+    REBOUNDS_OU_QUERY = """
     {
-        points_ou[] {
+        rebounds_ou[] {
             player_name
             line
             odds_over
@@ -230,7 +230,7 @@ def main():
     """
     
     # Extract market name from query (the array field name)
-    market_match = re.search(r'(\w+)\[\]', POINTS_OU_QUERY)
+    market_match = re.search(r'(\w+)\[\]', REBOUNDS_OU_QUERY)
     market = market_match.group(1).replace('_', ' ') if market_match else "unknown"
     
     # Prepare browser configuration (each thread will create its own browser)
@@ -268,7 +268,7 @@ def main():
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         # Submit all scraping tasks
         futures = {
-            executor.submit(scrape_single_game, browser_config, URL, market, POINTS_OU_QUERY): URL 
+            executor.submit(scrape_single_game, browser_config, URL, market, REBOUNDS_OU_QUERY): URL 
             for URL in filtered_links
         }
         
