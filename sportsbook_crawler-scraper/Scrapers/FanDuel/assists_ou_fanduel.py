@@ -1,29 +1,31 @@
-import agentql
 import csv
 import logging
+import agentql
 from playwright.sync_api import sync_playwright
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
 
-URL = "https://sportsbook.fanduel.com/basketball/nba/dallas-mavericks-@-oklahoma-city-thunder-35024521?tab=player-rebounds"
+# 1. UPDATED URL: Now points to the "Player Assists" tab
+URL = "https://sportsbook.fanduel.com/basketball/nba/phoenix-suns-@-minnesota-timberwolves-35036256?tab=player-assists"
 
+# 2. UPDATED QUERY: Looks for the "Player Assists" accordion header
 ACCORDION_QUERY = """
 {
-    rebounds_accordion_header(name: "Player Rebounds")
+    assists_accordion_header(name: "Player Assists")
 }
 """
 
-# Updated to look for a LIST of buttons, not just one
 SHOW_MORE_QUERY = """
 {
     show_more_buttons[](text: "Show more")
 }
 """
 
+# 3. UPDATED QUERY: Looks for data inside the "Player Assists" section
 DATA_QUERY = """
 {
-    lines_section(name: "Player Rebounds") {
+    lines_section(name: "Player Assists") {
         rows[] {
             player_name
             over_line_label
@@ -42,19 +44,18 @@ def clean_line(text):
 
 def force_click_fallback(page, text_to_find):
     try:
-        # We find ALL elements matching the text
         elements = page.get_by_text(text_to_find, exact=True).all()
         if not elements:
             return False
             
         log.info(f"FALLBACK: Found {len(elements)} instances of '{text_to_find}'. Clicking them all...")
         
-        # Click them in reverse order (bottom up) to avoid layout shifts messing up the top ones
+        # Click bottom-up to avoid layout shifts
         for i, element in enumerate(reversed(elements)):
             if element.is_visible():
                 element.click()
                 log.info(f"Clicked instance {i+1}")
-                page.wait_for_timeout(500) # Small pause between clicks
+                page.wait_for_timeout(500)
         return True
     except Exception as e:
         log.warning(f"Fallback click failed: {e}")
@@ -62,6 +63,7 @@ def force_click_fallback(page, text_to_find):
 
 def main():
     with sync_playwright() as p:
+        # Launch browser (Headless=False lets you see it working)
         browser = p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
         context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
         page = context.new_page()
@@ -70,24 +72,21 @@ def main():
         log.info(f"Opening {URL}")
         aql_page.goto(URL)
 
-        print("\n" + "="*50)
-        print("CHECKPOINT: If you see 'Press & Hold', click it manually.")
-        input("Press ENTER once the Page is loaded (Bot check passed)...")
-        print("="*50 + "\n")
+        log.info("Waiting 5 seconds for page load...")
+        page.wait_for_timeout(5000)
 
         # --- STEP 1: OPEN ACCORDION ---
         log.info("Attempting to open Accordion...")
         try:
             response = aql_page.query_elements(ACCORDION_QUERY)
-            if response.rebounds_accordion_header:
-                response.rebounds_accordion_header.click()
+            if response.assists_accordion_header:
+                response.assists_accordion_header.click()
             else:
                 raise Exception("AgentQL header miss")
         except Exception:
-            # Fallback will click the generic "Player Rebounds" text
-            # We use .last inside the helper to target the bottom accordion
+            # Fallback text updated to "Player Assists"
             try:
-                page.get_by_text("Player Rebounds", exact=True).last.click()
+                page.get_by_text("Player Assists", exact=True).last.click()
             except:
                 pass
         
@@ -98,7 +97,6 @@ def main():
         
         clicked_any = False
         
-        # Method A: AgentQL (Smart find)
         try:
             response = aql_page.query_elements(SHOW_MORE_QUERY)
             buttons = response.show_more_buttons
@@ -111,8 +109,6 @@ def main():
         except Exception:
             pass
             
-        # Method B: Fallback (Dumb text search)
-        # Always run this just in case AgentQL missed one
         if force_click_fallback(page, "Show more"):
             clicked_any = True
 
@@ -137,16 +133,16 @@ def main():
             if p_name and line_val:
                 csv_rows.append({
                     "player_name": p_name,
-                    "rebounds_line": line_val,
+                    "assists_line": line_val, # UPDATED: Changed key name
                     "odds_over": o_odds,
                     "odds_under": u_odds
                 })
 
-        output_file = "fanduel_rebounds.csv"
+        output_file = "fanduel_assists.csv"
         with open(output_file, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(
                 f,
-                fieldnames=["player_name", "rebounds_line", "odds_over", "odds_under"]
+                fieldnames=["player_name", "assists_line", "odds_over", "odds_under"]
             )
             writer.writeheader()
             writer.writerows(csv_rows)
