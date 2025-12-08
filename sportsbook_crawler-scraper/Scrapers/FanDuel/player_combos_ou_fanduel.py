@@ -1,16 +1,36 @@
 import csv
+import os
+import re
+import random
+import time
 import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import agentql
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, Geolocation
 
-# Logging setup
+# --- CONFIGURATION ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
 
-URL = "https://sportsbook.fanduel.com/basketball/nba/phoenix-suns-@-minnesota-timberwolves-35036256?tab=player-combos"
+# Stealth / Browser Config
+BROWSER_IGNORED_ARGS = ["--enable-automation", "--disable-extensions"]
+BROWSER_ARGS = [
+    "--disable-xss-auditor", "--no-sandbox", "--disable-setuid-sandbox",
+    "--disable-blink-features=AutomationControlled",
+    "--disable-features=IsolateOrigins,site-per-process", "--disable-infobars",
+]
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15",
+]
+LOCATIONS = [
+    ("America/New_York", Geolocation(longitude=-74.006, latitude=40.7128)),
+    ("America/Chicago", Geolocation(longitude=-87.6298, latitude=41.8781)),
+    ("America/Los_Angeles", Geolocation(longitude=-118.2437, latitude=34.0522)),
+]
 
-# QUERY 1: HEADERS ONLY (To open the accordions)
-HEADER_QUERY = """
+# --- QUERIES ---
+INTERACTION_QUERY = """
 {
     market_accordions[] {
         header_text
@@ -19,14 +39,12 @@ HEADER_QUERY = """
 }
 """
 
-# QUERY 2: GLOBAL BUTTON SEARCH (Find ALL "Show more" buttons anywhere)
 BUTTON_QUERY = """
 {
     show_more_buttons[](text: "Show more")
 }
 """
 
-# QUERY 3: DATA EXTRACTION
 DATA_QUERY = """
 {
     market_accordions[] {
@@ -42,161 +60,238 @@ DATA_QUERY = """
 }
 """
 
+# --- HELPERS ---
 def clean_line(text):
-    if not text: 
-        return ""
+    if not text: return ""
     return text.replace("O ", "").replace("U ", "").strip()
 
-def force_click_fallback(page):
-    """Hard fallback: Finds any element with text 'Show more' and clicks it."""
+def handle_press_and_hold(page):
+    """Detects and bypasses the 'Press & Hold' CAPTCHA."""
     try:
-        # Get all elements with exact text "Show more"
-        elements = page.get_by_text("Show more", exact=True).all()
-        if not elements:
-            return False
-            
-        log.info(f"FALLBACK: Found {len(elements)} 'Show more' buttons via text. Clicking...")
-        
-        # Click in reverse order (bottom to top) to prevent layout shifts hiding top buttons
+        captcha_btn = page.get_by_text("Press & Hold", exact=False).first
+        if captcha_btn.is_visible(timeout=3000):
+            log.info("⚠️ 'Press & Hold' CAPTCHA detected! Attempting bypass...")
+            box = captcha_btn.bounding_box()
+            if box:
+                page.mouse.move(box["x"] + box["width"] / 2, box["y"] + box["height"] / 2)
+                log.info("   -> Mouse DOWN (Holding for 10s)...")
+                page.mouse.down()
+                page.wait_for_timeout(10000)
+                log.info("   -> Mouse UP")
+                page.mouse.up()
+                page.wait_for_timeout(5000)
+                return True
+    except Exception:
+        pass
+    return False
+
+def force_click_fallback(page, text_to_find):
+    """Robust fallback to find and click buttons by text."""
+    try:
+        elements = page.get_by_text(text_to_find, exact=True).all()
+        if not elements: return False
+        log.info(f"FALLBACK: Found {len(elements)} instances of '{text_to_find}'. Clicking...")
         for i, element in enumerate(reversed(elements)):
             if element.is_visible():
-                try:
-                    element.click(timeout=1000)
-                    page.wait_for_timeout(300)
-                except Exception:
-                    pass
+                element.click()
+                page.wait_for_timeout(300)
         return True
-    except Exception as e:
-        log.warning(f"Fallback click failed: {e}")
+    except Exception:
         return False
 
-def save_rows_to_csv(rows, filename, line_col_name):
-    if not rows:
-        return
+def filter_nba_links(csv_path):
+    """Reads CSV and returns valid FanDuel NBA links (nba + numbers)."""
+    links = []
+    if not os.path.exists(csv_path):
+        log.error(f"CSV not found: {csv_path}")
+        return []
+        
+    with open(csv_path, 'r', encoding='utf-8-sig') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            url = row.get('url') or row.get('URL') or row.get('link') or row.get('Link') or ''
+            url = url.strip()
+            has_nba = 'nba' in url.lower()
+            has_numbers = any(char.isdigit() for char in url)
+            if has_nba and has_numbers:
+                links.append(url)
+    
+    unique_links = list(set(links))
+    log.info(f"Filtered Links: Found {len(unique_links)} URLs containing 'nba' and numbers.")
+    return unique_links
 
-    csv_rows = []
-    for row in rows:
-        p_name = row.get("player_name")
-        line_val = clean_line(row.get("over_line_label"))
-        o_odds = row.get("over_price")
-        u_odds = row.get("under_price")
+# --- WORKER FUNCTION ---
+def scrape_single_game(browser_config, base_url):
+    """Worker thread: Handles Bot Check -> Nav -> Combo Extraction."""
+    
+    # Append the Player Combos tab
+    if "?" in base_url:
+        URL = f"{base_url}&tab=player-combos"
+    else:
+        URL = f"{base_url}?tab=player-combos"
 
-        if p_name and line_val:
-            csv_rows.append({
-                "player_name": p_name,
-                line_col_name: line_val,
-                "odds_over": o_odds,
-                "odds_under": u_odds
-            })
+    game_name = "unknown"
+    try:
+        match = re.search(r'/nba/([^/?]+)', URL)
+        if match: game_name = match.group(1)
+    except: pass
 
-    if csv_rows:
-        with open(filename, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(
-                f,
-                fieldnames=["player_name", line_col_name, "odds_over", "odds_under"]
+    results = [] 
+    log.info(f"Starting scrape: {game_name}")
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=False,
+                args=browser_config['args'],
+                ignore_default_args=browser_config['ignore_default_args']
             )
-            writer.writeheader()
-            writer.writerows(csv_rows)
-        log.info(f"Saved {len(csv_rows)} rows to {filename}")
+            context = browser.new_context(
+                locale=browser_config['locale'],
+                timezone_id=browser_config['timezone_id'],
+                geolocation=browser_config['geolocation'],
+                user_agent=browser_config['user_agent'],
+                permissions=["geolocation"],
+                viewport={"width": 1280, "height": 720}
+            )
+            page = context.new_page()
+            aql_page = agentql.wrap(page)
 
-def main():
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            viewport={"width": 1280, "height": 720}
-        )
-        page = context.new_page()
-        aql_page = agentql.wrap(page)
+            # Navigate
+            aql_page.goto(URL)
+            page.wait_for_timeout(3000)
 
-        log.info(f"Opening URL: {URL}")
-        aql_page.goto(URL)
-        
-        log.info("Waiting 8 seconds for page load...")
-        page.wait_for_timeout(8000)
+            # 1. HANDLE BOT CHECK
+            handle_press_and_hold(page)
 
-        # --- STEP 1: OPEN ACCORDION HEADERS ---
-        log.info("Opening Accordions...")
-        try:
-            response = aql_page.query_elements(HEADER_QUERY)
-            accordions = getattr(response, 'market_accordions', [])
-            
-            for acc in accordions:
-                # Get text safely
-                try:
-                    raw_text = acc.header_text.text_content() if acc.header_text else ""
-                    text = raw_text.lower()
-                except:
-                    text = ""
+            # Wait for hydration
+            log.info("Waiting for page hydration...")
+            page.wait_for_timeout(5000)
 
-                # If it's a target combo header, click it
-                if "pts" in text or "reb" in text or "ast" in text:
-                    if acc.header_element:
-                        try:
-                            acc.header_element.click()
-                            page.wait_for_timeout(300)
-                        except:
-                            pass
-        except Exception as e:
-            log.warning(f"Header step issue: {e}")
-
-        # --- STEP 2: CLICK ALL 'SHOW MORE' BUTTONS (GLOBAL) ---
-        log.info("Hunting for 'Show more' buttons...")
-        page.wait_for_timeout(1000) # Wait for accordions to animate open
-        
-        clicked_any = False
-
-        # Attempt A: AgentQL Global Query
-        try:
-            response = aql_page.query_elements(BUTTON_QUERY)
-            buttons = getattr(response, 'show_more_buttons', [])
-            if buttons:
-                log.info(f"AgentQL found {len(buttons)} buttons. Clicking...")
-                for btn in buttons:
+            # 2. OPEN ACCORDIONS
+            try:
+                resp = aql_page.query_elements(INTERACTION_QUERY)
+                accordions = getattr(resp, 'market_accordions', [])
+                for acc in accordions:
                     try:
+                        raw_text = acc.header_text.text_content() if acc.header_text else ""
+                        text = raw_text.lower()
+                    except: text = ""
+
+                    if "pts" in text or "reb" in text or "ast" in text:
+                        if acc.header_element:
+                            try:
+                                acc.header_element.click()
+                                page.wait_for_timeout(300)
+                            except: pass
+            except: pass
+
+            # 3. CLICK SHOW MORE
+            try:
+                resp = aql_page.query_elements(BUTTON_QUERY)
+                if resp.show_more_buttons:
+                    for btn in resp.show_more_buttons:
                         btn.click()
                         page.wait_for_timeout(500)
-                        clicked_any = True
-                    except:
-                        pass
-        except Exception:
-            pass
+            except: pass
+            
+            force_click_fallback(page, "Show more")
+            page.wait_for_timeout(3000)
 
-        # Attempt B: Playwright Fallback (Most Reliable)
-        if force_click_fallback(page):
-            clicked_any = True
+            # 4. EXTRACT DATA
+            data = aql_page.query_data(DATA_QUERY)
+            market_accordions = data.get("market_accordions", [])
 
-        if clicked_any:
-            log.info("Buttons clicked. Waiting 4 seconds for lists to expand...")
-            page.wait_for_timeout(4000)
-        else:
-            log.info("No 'Show more' buttons found/clicked (Lists might be short).")
+            for section in market_accordions:
+                header = section.get("header_text", "")
+                rows = section.get("rows", [])
 
-        # --- STEP 3: EXTRACT DATA ---
-        log.info("Extracting data...")
-        data = aql_page.query_data(DATA_QUERY)
+                if not header: continue
+                
+                # Normalize Market Name based on Header
+                market_name = None
+                
+                if "Pts + Reb + Ast" in header:
+                    market_name = "points rebounds assists"
+                elif "Pts + Reb" in header:
+                    market_name = "points rebounds"
+                elif "Pts + Ast" in header:
+                    market_name = "points assists"
+                elif "Reb + Ast" in header:
+                    market_name = "rebounds assists"
+
+                # If it's a valid market, extract rows
+                if market_name:
+                    for r in rows:
+                        p_name = r.get("player_name")
+                        line_val = clean_line(r.get("over_line_label"))
+                        
+                        if p_name and line_val:
+                            results.append({
+                                "game": game_name,
+                                "market": market_name,
+                                "player": p_name,
+                                "line": line_val,
+                                "odds_over": r.get("over_price"),
+                                "odds_under": r.get("under_price")
+                            })
+            
+            log.info(f" -> Scraped {len(results)} rows from {game_name}")
+            browser.close()
+
+    except Exception as e:
+        log.error(f"Error scraping {game_name}: {e}")
+
+    return results
+
+# --- MAIN ---
+def main():
+    # Setup paths
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    fanduel_dir = os.path.dirname(script_dir)
+    scraper_dir = os.path.dirname(fanduel_dir)
+    
+    links_path = os.path.join(scraper_dir, 'Links', 'betting_links_fanduel.csv')
+    
+    # 1. Get Links
+    links = filter_nba_links(links_path)
+    log.info(f"Found {len(links)} NBA games to process.")
+
+    # 2. Config
+    location = random.choice(LOCATIONS)
+    browser_config = {
+        'args': BROWSER_ARGS,
+        'ignore_default_args': BROWSER_IGNORED_ARGS,
+        'locale': "en-US",
+        'timezone_id': location[0],
+        'geolocation': location[1],
+        'user_agent': random.choice(USER_AGENTS)
+    }
+
+    # 3. Thread Pool Execution
+    all_results = []
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        futures = {executor.submit(scrape_single_game, browser_config, url): url for url in links}
         
-        market_accordions = data.get("market_accordions", [])
-        
-        for section in market_accordions:
-            header = section.get("header_text", "")
-            rows = section.get("rows", [])
+        for future in as_completed(futures):
+            all_results.extend(future.result())
 
-            if not header:
-                continue
+    # 4. Save to Single CSV (fanduel_odds.csv)
+    output_dir = os.path.join(script_dir, '..', '..', 'Odds')
+    os.makedirs(output_dir, exist_ok=True)
+    
+    output_path = os.path.join(output_dir, 'fanduel_odds.csv')
 
-            # Route based on header text
-            if "Pts + Reb + Ast" in header:
-                save_rows_to_csv(rows, "fanduel_pts_reb_ast.csv", "pra_line")
-            elif "Pts + Reb" in header:
-                save_rows_to_csv(rows, "fanduel_pts_reb.csv", "pr_line")
-            elif "Pts + Ast" in header:
-                save_rows_to_csv(rows, "fanduel_pts_ast.csv", "pa_line")
-            elif "Reb + Ast" in header:
-                save_rows_to_csv(rows, "fanduel_reb_ast.csv", "ra_line")
-        
-        log.info("Processing complete.")
-        browser.close()
+    # Define strict column order requested
+    fieldnames = ["game", "market", "player", "line", "odds_over", "odds_under"]
+    
+    # Write Mode: 'w' overwrites. Change to 'a' if you want to append.
+    with open(output_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(all_results)
+
+    log.info(f"Scraping Job Complete. Saved {len(all_results)} rows to {output_path}")
 
 if __name__ == "__main__":
     main()

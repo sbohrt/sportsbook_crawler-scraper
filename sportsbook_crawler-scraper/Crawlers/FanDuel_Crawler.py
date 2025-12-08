@@ -20,7 +20,7 @@ class SportsbookLinkScraper:    #Class that contains logic which identifes sport
         r'/competitions/[\w-]+',
         
         
-        r'/(nba|nfl|mlb|nhl|ncaab|ncaaf)/[\w-]+/[\w-]+', #two path segments after sport like nba/lakers/celtics-game
+        r'/(nfl|nba|mlb|nhl|ncaab|ncaaf)/[\w-]+/[\w-]+', #two path segments after sport like nba/lakers/celtics-game
         r'/(soccer|football|basketball|baseball|hockey|tennis|mma|ufc|boxing)/[\w-]+/[\w-]+', #same but not abbreviated
         
     
