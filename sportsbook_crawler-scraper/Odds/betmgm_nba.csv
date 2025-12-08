@@ -1,22 +1,47 @@
 game,market,player,line,odds_over,odds_under
-san-antonio-spurs-at-new-orleans-pelicans,points ou,De'Aaron Fox,24.5,-110,-118
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Trey Murphy III,21.5,-120,-110
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Saddiq Bey,16.5,-125,-110
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Jeremiah Fears,16.5,-110,-118
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Devin Vassell,15.5,-120,-110
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Dylan Harper,13.5,-105,-130
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Stephon Castle,13.5,-130,-105
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Harrison Barnes,12.5,-105,-125
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Derik Queen,12.5,-120,-110
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Keldon Johnson,11.5,-125,-105
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Herbert Jones,8.5,100,-130
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Jose Alvarado,8.5,-118,-110
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Julian Champagnie,8.5,-150,110
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Luke Kornet,7.5,-145,105
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Jordan Hawkins,6.5,-110,-118
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Yves Missi,6.5,115,-155
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Jeremy Sochan,6.5,-110,-118
-san-antonio-spurs-at-new-orleans-pelicans,points ou,Micah Peavy,4.5,-135,100
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Trey Murphy III,31.5,-115,-118
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Jordan Hawkins,9.5,-125,-105
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Harrison Barnes,17.5,-130,-105
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Micah Peavy,8.5,-120,-110
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Derik Queen,24.5,-110,-120
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Saddiq Bey,25.5,-118,-115
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Yves Missi,13.5,-115,-115
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Jose Alvarado,14.5,-105,-125
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Jeremiah Fears,24.5,-105,-125
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Dylan Harper,20.5,-105,-130
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Herbert Jones,12.5,-110,-118
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,De'Aaron Fox,34.5,-120,-110
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Luke Kornet,17.5,-118,-115
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Jeremy Sochan,12.5,-125,-105
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Julian Champagnie,13.5,-125,-105
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Devin Vassell,21.5,-135,100
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Stephon Castle,23.5,-125,-105
+san-antonio-spurs-at-new-orleans-pelicans,points rebounds assists,Keldon Johnson,20.5,-110,-118
+sacramento-kings-at-indiana-pacers,points rebounds assists,Zach LaVine,27.5,-120.0,-110.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Bennedict Mathurin,29.5,-125.0,-105.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Keegan Murray,24.5,-105.0,-125.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Jay Huff,18.5,-118.0,-110.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Demar DeRozan,26.5,-115.0,-115.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Andrew Nembhard,26.5,-130.0,-105.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Russell Westbrook,28.5,-105.0,-125.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Jarace Walker,13.5,105.0,-145.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Malik Monk,19.5,-118.0,-115.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,T.J. McConnell,17.5,-105.0,-125.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Maxime Raynaud,20.5,-110.0,-118.0
+sacramento-kings-at-indiana-pacers,points rebounds assists,Pascal Siakam,35.5,-120.0,-110.0
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Mark Williams,21.5,-120,-110
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Royce O’Neale,18.5,-110,-120
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Anthony Edwards,38.5,-125,-110
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Oso Ighodaro,11.5,+100,-135
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Ryan Dunn,13.5,-118,-115
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Collin Gillespie,26.5,-105,-130
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Dillon Brooks,27.5,-120,-110
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Rudy Gobert,23.5,-130,-105
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Naz Reid,25.5,-115,-115
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Jaden McDaniels,22.5,-125,-105
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Julius Randle,36.5,-115,-115
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Donte DiVincenzo,22.5,-115,-115
+phoenix-suns-at-minnesota-timberwolves,points rebounds assists,Grayson Allen,24.5,-118,-115
 phoenix-suns-at-minnesota-timberwolves,points ou,Anthony Edwards,29.5,-105,-125
 phoenix-suns-at-minnesota-timberwolves,points ou,Julius Randle,23.5,-110,-120
 phoenix-suns-at-minnesota-timberwolves,points ou,Dillon Brooks,21.5,-125,-105
@@ -31,14 +56,32 @@ phoenix-suns-at-minnesota-timberwolves,points ou,Royce O’Neale,9.5,-125,-105
 phoenix-suns-at-minnesota-timberwolves,points ou,Ryan Dunn,7.5,100,-135
 phoenix-suns-at-minnesota-timberwolves,points ou,Oso Ighodaro,4.5,-120,-110
 sacramento-kings-at-indiana-pacers,points ou,Pascal Siakam,24.5,-105,-130
-sacramento-kings-at-indiana-pacers,points ou,Zach LaVine,21.5,-110,-118
+sacramento-kings-at-indiana-pacers,points ou,Zach LaVine,21.5,-110,-120
 sacramento-kings-at-indiana-pacers,points ou,Bennedict Mathurin,21.5,-120,-110
-sacramento-kings-at-indiana-pacers,points ou,Demar DeRozan,19.5,-105,-125
-sacramento-kings-at-indiana-pacers,points ou,Keegan Murray,16.5,100,-130
+sacramento-kings-at-indiana-pacers,points ou,Demar DeRozan,19.5,-105,-130
 sacramento-kings-at-indiana-pacers,points ou,Andrew Nembhard,16.5,-120,-110
-sacramento-kings-at-indiana-pacers,points ou,Russell Westbrook,13.5,-118,-110
+sacramento-kings-at-indiana-pacers,points ou,Keegan Murray,15.5,-130,100
+sacramento-kings-at-indiana-pacers,points ou,Russell Westbrook,13.5,-120,-110
 sacramento-kings-at-indiana-pacers,points ou,Malik Monk,13.5,-105,-125
 sacramento-kings-at-indiana-pacers,points ou,Maxime Raynaud,11.5,-118,-110
-sacramento-kings-at-indiana-pacers,points ou,Jay Huff,11.5,100,-130
+sacramento-kings-at-indiana-pacers,points ou,Jay Huff,11.5,-105,-130
 sacramento-kings-at-indiana-pacers,points ou,T.J. McConnell,9.5,-110,-118
 sacramento-kings-at-indiana-pacers,points ou,Jarace Walker,8.5,115,-155
+san-antonio-spurs-at-new-orleans-pelicans,points ou,De'Aaron Fox,24.5,-110,-118
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Trey Murphy III,21.5,-120,-110
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Saddiq Bey,16.5,-125,-110
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Jeremiah Fears,16.5,-115,-115
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Devin Vassell,15.5,-125,-110
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Dylan Harper,13.5,100,-130
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Stephon Castle,13.5,-130,100
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Harrison Barnes,12.5,-105,-130
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Derik Queen,12.5,-120,-110
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Keldon Johnson,12.5,-115,-115
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Herbert Jones,8.5,100,-135
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Jose Alvarado,8.5,-115,-115
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Julian Champagnie,8.5,-150,110
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Luke Kornet,7.5,-145,110
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Jordan Hawkins,6.5,-110,-118
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Yves Missi,6.5,115,-150
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Jeremy Sochan,6.5,-115,-115
+san-antonio-spurs-at-new-orleans-pelicans,points ou,Micah Peavy,4.5,-135,100

@@ -272,6 +272,16 @@ async def main():
     
     print("\nSPORTSBOOK LINK SCRAPER")
     
+    # Clear the odds CSV file for ProphetX
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.dirname(script_dir)
+    odds_dir = os.path.join(parent_dir, 'Odds')
+    odds_file = os.path.join(odds_dir, 'prophetx_nba.csv')
+    
+    if os.path.exists(odds_file):
+        os.remove(odds_file)
+        print(f"Cleared odds file: {odds_file}")
+    
     
     start_url = "https://www.prophetx.co/?currency=cash"
     
