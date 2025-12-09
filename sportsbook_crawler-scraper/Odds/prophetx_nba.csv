@@ -1,184 +1,32 @@
 game,market,player,line,odds_over,odds_under
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Stephon Castle,27.5,132.0,-190.0
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Jose Alvarado,14,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Harrison Barnes,18.5,-101.0,-126.0
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Saddiq Bey,26.5,105.0,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Julian Champagnie,15,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Jeremiah Fears,24.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,De'Aaron Fox,33.5,-117.0,-109.0
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Dylan Harper,21.5,130.0,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Jordan Hawkins,10,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Keldon Johnson,20,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Herbert Jones,13.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Luke Kornet,18,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Bryce McGowens,14.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Yves Missi,14,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Trey Murphy III,31.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Micah Peavy,9.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Derik Queen,24.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Jeremy Sochan,14,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds assists ou,Devin Vassell,22.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Anthony Edwards,39,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Dillon Brooks,28.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Grayson Allen,22.5,-160,+122
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Mike Conley,8.5,,+140
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Donte DiVincenzo,21.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Ryan Dunn,13.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Collin Gillespie,26,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Rudy Gobert,22.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Oso Ighodaro,11,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Jaden McDaniels,22.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Royce O'Neale,18,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Julius Randle,36.5,,-117
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Naz Reid,23.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds assists ou,Mark Williams,22.5,,
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Pascal Siakam,35.5,-125,-102
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Zach LaVine,28,Request,Request
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,DeMar DeRozan,26.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Jay Huff,18.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Isaiah Jackson,14.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Bennedict Mathurin,29.5,-120,-106
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,T.J. McConnell,17.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Malik Monk,20,Request,Request
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Keegan Murray,24.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Andrew Nembhard,26.5,-109,-117
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Maxime Raynaud,19.5,-130,Request
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Jarace Walker,13.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points rebounds assists ou,Russell Westbrook,28.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Pascal Siakam Total Points & Rebounds,32.5,+100,-125
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Zach LaVine Total Points & Rebounds,25.0,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,DeMar DeRozan Total Points & Rebounds,23.5,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Jay Huff Total Points & Rebounds,16.0,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Isaiah Jackson Total Points & Rebounds,13.0,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Bennedict Mathurin Total Points & Rebounds,27.5,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,T.J. McConnell Total Points & Rebounds,12.5,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Malik Monk Total Points & Rebounds,16.5,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Keegan Murray Total Points & Rebounds,22.5,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Andrew Nembhard Total Points & Rebounds,19.5,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Maxime Raynaud Total Points & Rebounds,19.5,,-123
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Jarace Walker Total Points & Rebounds,12.5,,
-sacramento-kings-vs-indiana-pacers,points rebounds ou,Russell Westbrook Total Points & Rebounds,20.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Anthony Edwards Total Points & Rebounds,33.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Dillon Brooks Total Points & Rebounds,25.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Grayson Allen Total Points & Rebounds,18.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Mike Conley Total Points & Rebounds,6.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Donte DiVincenzo Total Points & Rebounds,16.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Ryan Dunn Total Points & Rebounds,11.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Collin Gillespie Total Points & Rebounds,19.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Rudy Gobert Total Points & Rebounds,19.5,+105,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Oso Ighodaro Total Points & Rebounds,8.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Jaden McDaniels Total Points & Rebounds,17.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Royce O'Neale Total Points & Rebounds,14.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Julius Randle Total Points & Rebounds,27.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Naz Reid Total Points & Rebounds,19.5,,
-phoenix-suns-vs-minnesota-timberwolves,points rebounds ou,Mark Williams Total Points & Rebounds,19.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Stephon Castle Total Points & Rebounds,21.5,-190.0,120.0
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Jose Alvarado Total Points & Rebounds,11.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Harrison Barnes Total Points & Rebounds,17.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Saddiq Bey Total Points & Rebounds,23.0,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Julian Champagnie Total Points & Rebounds,13.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Jeremiah Fears Total Points & Rebounds,20.0,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,De'Aaron Fox Total Points & Rebounds,28.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Dylan Harper Total Points & Rebounds,16.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Jordan Hawkins Total Points & Rebounds,9.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Keldon Johnson Total Points & Rebounds,18.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Herbert Jones Total Points & Rebounds,11.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Luke Kornet Total Points & Rebounds,16.0,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Bryce McGowens Total Points & Rebounds,12.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Yves Missi Total Points & Rebounds,12.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Trey Murphy III Total Points & Rebounds,27.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Micah Peavy Total Points & Rebounds,7.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Derik Queen Total Points & Rebounds,20.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Jeremy Sochan Total Points & Rebounds,12.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points rebounds ou,Devin Vassell Total Points & Rebounds,20.0,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Stephon Castle,21.5,+120,-150
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Jose Alvarado,11.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Harrison Barnes,14.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Saddiq Bey,19.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Julian Champagnie,10.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Jeremiah Fears,20.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,De'Aaron Fox,30.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Dylan Harper,18.5,+130,+132
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Jordan Hawkins,8.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Keldon Johnson,13.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Herbert Jones,10.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Luke Kornet,11,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Bryce McGowens,11.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Yves Missi,8.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Trey Murphy III,26.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Micah Peavy,6.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Derik Queen,17.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Jeremy Sochan,9.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,points assists ou,Devin Vassell,18,,
-sacramento-kings-vs-indiana-pacers,points assists ou,Pascal Siakam Total Points & Assists,29,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Zach LaVine Total Points & Assists,24,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,DeMar DeRozan Total Points & Assists,23.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Jay Huff Total Points & Assists,13,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Isaiah Jackson Total Points & Assists,8.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Bennedict Mathurin Total Points & Assists,24.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,T.J. McConnell Total Points & Assists,14.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Malik Monk Total Points & Assists,17.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Keegan Murray Total Points & Assists,17.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Andrew Nembhard Total Points & Assists,24.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Maxime Raynaud Total Points & Assists,13,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Jarace Walker Total Points & Assists,9.5,Request,Request
-sacramento-kings-vs-indiana-pacers,points assists ou,Russell Westbrook Total Points & Assists,21.5,Request,Request
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Anthony Edwards,33.5,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Dillon Brooks,25,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Grayson Allen,20.5,-150,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Mike Conley,9.5,,-130
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Donte DiVincenzo,18,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Ryan Dunn,8.5,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Collin Gillespie,22.5,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Rudy Gobert,12.5,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Oso Ighodaro,7.5,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Jaden McDaniels,17.5,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Royce O'Neale,13.5,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Julius Randle,29,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Naz Reid,17.5,,
-phoenix-suns-vs-minnesota-timberwolves,points assists ou,Mark Williams,13,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Stephon Castle,11,-500,-150
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Jose Alvarado,5.5,,-200
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Harrison Barnes,6,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Saddiq Bey,8.5,,-130
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Julian Champagnie,5.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Jeremiah Fears,7.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,De'Aaron Fox,10.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Dylan Harper,7,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Jordan Hawkins,3.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Keldon Johnson,8.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Herbert Jones,4.5,105,127
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Luke Kornet,10,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Yves Missi,7.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Trey Murphy III,9.5,105,-106
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Micah Peavy,3.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Derik Queen,11.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Jeremy Sochan,6.5,,
-san-antonio-spurs-vs-new-orleans-pelicans,rebounds assists ou,Devin Vassell,6,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Anthony Edwards,9.5,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Dillon Brooks,5.5,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Grayson Allen,5.5,138.0,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Mike Conley,5.5,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Donte DiVincenzo,8.0,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Ryan Dunn,6.5,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Collin Gillespie,8.5,-160.0,150.0
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Rudy Gobert,12.0,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Oso Ighodaro,6.5,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Jaden McDaniels,7.0,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Royce O'Neale,8.0,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Julius Randle,13.0,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Naz Reid,8.5,,
-phoenix-suns-vs-minnesota-timberwolves,rebounds assists ou,Mark Williams,9.5,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Pascal Siakam Total Rebounds & Assists,11.5,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Zach LaVine Total Rebounds & Assists,6.0,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,DeMar DeRozan Total Rebounds & Assists,7.5,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Jay Huff Total Rebounds & Assists,7.5,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Isaiah Jackson Total Rebounds & Assists,6.5,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Bennedict Mathurin Total Rebounds & Assists,8.0,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,T.J. McConnell Total Rebounds & Assists,7.5,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Malik Monk Total Rebounds & Assists,6.5,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Keegan Murray Total Rebounds & Assists,8.0,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Andrew Nembhard Total Rebounds & Assists,10.0,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Maxime Raynaud Total Rebounds & Assists,8.5,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Jarace Walker Total Rebounds & Assists,5.5,,
-sacramento-kings-vs-indiana-pacers,rebounds assists ou,Russell Westbrook Total Rebounds & Assists,14.0,,
+phoenix-suns-vs-minnesota-timberwolves,points ou,Anthony Edwards Points,27.5,105,-108
+phoenix-suns-vs-minnesota-timberwolves,points ou,Dillon Brooks Points,22.5,-105,-120
+phoenix-suns-vs-minnesota-timberwolves,points ou,Grayson Allen Points,17.5,-109,-116
+phoenix-suns-vs-minnesota-timberwolves,points ou,Mike Conley Points,4.5,-122,-140
+phoenix-suns-vs-minnesota-timberwolves,points ou,Donte DiVincenzo Points,12.5,-118,-108
+phoenix-suns-vs-minnesota-timberwolves,points ou,Ryan Dunn Points,5.5,-122,-158
+phoenix-suns-vs-minnesota-timberwolves,points ou,Collin Gillespie Points,15.5,-125,109
+phoenix-suns-vs-minnesota-timberwolves,points ou,Rudy Gobert Points,10.5,-101,-124
+phoenix-suns-vs-minnesota-timberwolves,points ou,Oso Ighodaro Points,4.5,-140,-136
+phoenix-suns-vs-minnesota-timberwolves,points ou,Jaden McDaniels Points,13.5,-107,-110
+phoenix-suns-vs-minnesota-timberwolves,points ou,Royce O'Neale Points,9.5,103,-114
+phoenix-suns-vs-minnesota-timberwolves,points ou,Julius Randle Points,19.5,-118,105
+phoenix-suns-vs-minnesota-timberwolves,points ou,Naz Reid Points,14.5,121,
+phoenix-suns-vs-minnesota-timberwolves,points ou,Mark Williams Points,11.5,-104,-117
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Stephon Castle Points,14.5,102.0,-130.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Jose Alvarado Points,8.5,-125.0,-111.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Harrison Barnes Points,12.5,-113.0,-113.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Saddiq Bey Points,16.5,108.0,-115.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Julian Champagnie Points,9.5,100.0,-108.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Jeremiah Fears Points,16.5,-114.0,-113.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,De'Aaron Fox Points,23.5,-106.0,-120.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Dylan Harper Points,13.5,100.0,
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Jordan Hawkins Points,6.5,108.0,
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Keldon Johnson Points,11.5,-152.0,-121.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Herbert Jones Points,8.5,-111.0,-115.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Luke Kornet Points,7.5,-132.0,104.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Yves Missi Points,9.5,,
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Trey Murphy III Points,21.5,-115.0,103.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Micah Peavy Points,11.5,,
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Derik Queen Points,13.5,-116.0,-109.0
+san-antonio-spurs-vs-new-orleans-pelicans,points ou,Devin Vassell Points,16.5,-104.0,-123.0
