@@ -2,158 +2,230 @@ import csv
 import os
 import re
 import random
-import time
 import logging
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import agentql
-from playwright.sync_api import sync_playwright, Geolocation
+import asyncio
+import nodriver as n
+from playwright.async_api import async_playwright, Geolocation
+
+# --- WINDOWS FIX ---
+if os.name == 'nt':
+    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
 # --- CONFIGURATION ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
 
-# Stealth / Browser Config
-BROWSER_IGNORED_ARGS = ["--enable-automation", "--disable-extensions"]
 BROWSER_ARGS = [
     "--disable-xss-auditor", "--no-sandbox", "--disable-setuid-sandbox",
     "--disable-blink-features=AutomationControlled",
     "--disable-features=IsolateOrigins,site-per-process", "--disable-infobars",
 ]
-USER_AGENTS = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15",
-]
-LOCATIONS = [
-    ("America/New_York", Geolocation(longitude=-74.006, latitude=40.7128)),
-    ("America/Chicago", Geolocation(longitude=-87.6298, latitude=41.8781)),
-    ("America/Los_Angeles", Geolocation(longitude=-118.2437, latitude=34.0522)),
-]
 
-# --- QUERIES ---
-INTERACTION_QUERY = """
-{
-    market_accordions[] {
-        header_text
-        header_element
-    }
+nba_teams = {
+    "atlanta-hawks", "boston-celtics", "brooklyn-nets", "charlotte-hornets",
+    "chicago-bulls", "cleveland-cavaliers", "dallas-mavericks", "denver-nuggets",
+    "detroit-pistons", "golden-state-warriors", "houston-rockets", "indiana-pacers",
+    "los-angeles-clippers", "los-angeles-lakers", "memphis-grizzlies", "miami-heat",
+    "milwaukee-bucks", "minnesota-timberwolves", "new-orleans-pelicans",
+    "new-york-knicks", "philadelphia-76ers", "toronto-raptors", "orlando-magic",
+    "washington-wizards", "oklahoma-city-thunder", "portland-trail-blazers",
+    "utah-jazz", "phoenix-suns", "sacramento-kings", "san-antonio-spurs"
 }
-"""
-
-BUTTON_QUERY = """
-{
-    show_more_buttons[](text: "Show more")
-}
-"""
-
-DATA_QUERY = """
-{
-    market_accordions[] {
-        header_text
-        rows[] {
-            player_name
-            over_line_label
-            over_price
-            under_line_label
-            under_price
-        }
-    }
-}
-"""
 
 # --- HELPERS ---
 def clean_line(text):
     if not text: return ""
     return text.replace("O ", "").replace("U ", "").strip()
 
-def handle_press_and_hold(page):
-    """
-    Detects and bypasses the 'Press & Hold' CAPTCHA using the specific iframe locator.
-    """
+async def handle_press_and_hold(page):
+    """Detects and bypasses the 'Press & Hold' CAPTCHA inside the iframe."""
     try:
-        # Use the specific iframe locator strategy requested
-        # We use frame_locator to robustly find the button inside the about:blank iframe
-        captcha_btn = page.frame_locator('iframe[src="about:blank"]').get_by_role("button", name="Press & Hold").first
+        iframe = page.frame_locator('iframe[src="about:blank"]')
+        captcha_btn = iframe.get_by_role("button", name="Press & Hold").first
         
-        # Check if visible
-        if captcha_btn.is_visible(timeout=5000):
-            log.info("⚠️ 'Press & Hold' CAPTCHA detected inside iframe! Attempting bypass...")
-            
-            # Get bounding box to interact with mouse coordinates
-            box = captcha_btn.bounding_box()
+        if await captcha_btn.is_visible(timeout=3000):
+            log.info("⚠️ 'Press & Hold' detected! Engaging...")
+            box = await captcha_btn.bounding_box()
             if box:
-                # Move mouse to center of button
-                page.mouse.move(box["x"] + box["width"] / 2, box["y"] + box["height"] / 2)
-                
-                log.info("   -> Mouse DOWN (Holding for 10s)...")
-                page.mouse.down()
-                
-                # HOLD for 10 seconds
-                page.wait_for_timeout(10000)
-                
-                log.info("   -> Mouse UP")
-                page.mouse.up()
-                
-                # Wait for redirect
-                page.wait_for_timeout(5000)
+                await page.mouse.move(box["x"] + box["width"] / 2, box["y"] + box["height"] / 2)
+                await page.mouse.down()
+                log.info("   -> Holding button (10s)...")
+                await asyncio.sleep(10)
+                await page.mouse.up()
+                log.info("   -> Released.")
+                await page.wait_for_timeout(5000)
                 return True
     except Exception:
-        # If the specific iframe selector fails, we just continue (page might have loaded normally)
         pass
     return False
 
-def force_click_fallback(page, text_to_find):
-    """Robust fallback to find and click buttons by text."""
+async def open_assists_accordion(page):
+    """Finds and clicks the 'Player Assists' header using Pure Playwright."""
     try:
-        elements = page.get_by_text(text_to_find, exact=True).all()
-        if not elements: return False
-        log.info(f"FALLBACK: Found {len(elements)} instances of '{text_to_find}'. Clicking...")
-        for i, element in enumerate(reversed(elements)):
-            if element.is_visible():
-                element.click()
-                page.wait_for_timeout(300)
-        return True
+        # 1. Look for specific button role with exact text
+        header = page.get_by_role("button", name="Player Assists", exact=True).first
+        
+        if await header.is_visible():
+            expanded = await header.get_attribute("aria-expanded")
+            if expanded == "true":
+                log.info("Header already open.")
+                return True # It is open, we can proceed
+            
+            log.info("Found 'Player Assists' header. Clicking...")
+            await header.click()
+            await page.wait_for_timeout(1000)
+            return True
+
+        # 2. Fallback
+        text_header = page.get_by_text("Player Assists", exact=True).first
+        if await text_header.is_visible():
+            log.info("Found 'Player Assists' text. Clicking...")
+            await text_header.click()
+            await page.wait_for_timeout(1000)
+            return True
+            
+    except Exception as e:
+        log.warning(f"Accordion interaction issue: {e}")
+    return False
+
+async def click_show_more(page):
+    """Clicks 'Show more' buttons."""
+    try:
+        show_mores = await page.get_by_text("Show more", exact=True).all()
+        if show_mores:
+            log.info(f"Found {len(show_mores)} 'Show more' buttons. Clicking...")
+            for btn in reversed(show_mores):
+                if await btn.is_visible():
+                    await btn.click()
+                    await asyncio.sleep(0.5)
     except Exception:
-        return False
+        pass
 
-def filter_nba_links(csv_path):
+async def extract_data_pure_playwright(page, game_name):
     """
-    Reads CSV and returns valid FanDuel NBA Game links.
-    FILTER LOGIC:
-    1. Must contain 'nba'.
-    2. Must contain '-@-' (This ensures it is a GAME between two teams).
-    3. Must end with a numeric ID (ignoring query params).
-    
-    This effectively filters out team pages like 'philadelphia-76ers' because 
-    they do not contain the '-@-' separator.
+    Extracts betting rows by scanning the entire Player Assists container text.
+    This is more robust than looking for specific list items.
     """
-    links = []
-    if not os.path.exists(csv_path):
-        log.error(f"CSV not found: {csv_path}")
-        return []
+    results = []
+    try:
+        # 1. Locate the header again to find the container
+        header = page.get_by_role("button", name="Player Assists", exact=True).first
         
-    with open(csv_path, 'r', encoding='utf-8-sig') as f:
-        reader = csv.DictReader(f)
+        if not await header.is_visible():
+            # Fallback text locator
+            header = page.get_by_text("Player Assists", exact=True).first
+            if not await header.is_visible():
+                return []
+
+        # 2. Get the parent/sibling container that holds the data
+        # We assume the data is in a div following the header.
+        # A robust way is to get the bounding box of the header and look below it,
+        # OR simply scrape ALL visible text on the page and parse it (safest).
         
-        # Regex: nba/ + any chars + -@- + any chars + hyphen + digits
-        valid_game_pattern = re.compile(r'nba/.*-@-.+-\d{5,}')
+        # We will try to find the specific market container first
+        # Usually it's a sibling div or inside a list
+        
+        # Let's try grabbing the text of the *entire* relevant section
+        # We look for the container that has "Player Assists" and likely "Show less" (since we expanded it)
+        # or simply scan for the pattern on the whole page content.
+        
+        page_text = await page.content() # Get raw HTML
+        
+        # We can use regex on the raw HTML or text content to find the patterns
+        # Pattern: Player Name ... O [Line] [Odds] ... U [Line] [Odds]
+        # This regex is designed to find:
+        # >Name< ... >O 5.5< ... >-110< ... >U 5.5< ... >-110<
+        
+        # However, Playwright's locator list strategy is better if we target the right elements.
+        # Let's try a very broad locator: Any element containing "O " followed by a number
+        
+        potential_rows = await page.locator('div, li').filter(has_text=re.compile(r'^O\s+\d+\.?\d*')).all()
+        
+        # Deduplicate elements (nested divs might match multiple times)
+        unique_texts = set()
+        
+        log.info(f"Scanning {len(potential_rows)} potential row elements...")
 
-        for row in reader:
-            url = row.get('url') or row.get('URL') or row.get('link') or row.get('Link') or ''
-            url = url.strip()
+        for row in potential_rows:
+            text = await row.inner_text()
+            if not text or text in unique_texts: continue
+            unique_texts.add(text)
             
-            # Apply strict game filter
-            if valid_game_pattern.search(url):
-                links.append(url)
+            lines = text.split('\n')
+            # Look for the specific structure:
+            # 1. Player Name
+            # 2. O [Line]
+            # 3. [Odds]
+            # 4. U [Line]
+            # 5. [Odds]
             
-    unique_links = list(set(links))
-    log.info(f"Filtered Links: Found {len(unique_links)} valid GAME URLs (excluding team pages).")
-    return unique_links
+            # Simple Parser
+            if "O " in text and "U " in text:
+                player_name = lines[0].strip()
+                
+                # Filter out headers
+                if "Player" in player_name or "Assists" in player_name or len(player_name) > 40: continue
+                
+                # Find Over Line/Odds
+                o_line = None
+                o_odds = None
+                u_odds = None
+                
+                for i, line in enumerate(lines):
+                    if line.startswith("O ") and not o_line:
+                        o_line = line.replace("O ", "").strip()
+                        if i+1 < len(lines): o_odds = lines[i+1]
+                    
+                    if line.startswith("U ") and not u_odds:
+                        # u_line = line.replace("U ", "").strip() # Usually same as O line
+                        if i+1 < len(lines): u_odds = lines[i+1]
+                
+                if player_name and o_line and o_odds and u_odds:
+                    results.append({
+                        "game": game_name,
+                        "market": "player assists",
+                        "player": player_name,
+                        "line": o_line,
+                        "odds_over": o_odds,
+                        "odds_under": u_odds
+                    })
 
-# --- WORKER FUNCTION ---
-def scrape_single_game(browser_config, base_url):
-    """Worker thread: Handles Bot Check -> Nav -> Assists Extraction."""
+    except Exception as e:
+        log.warning(f"Manual extraction issue: {e}")
+        
+    return results
+
+def filter_nba_event_links(csv_file_path, nba_teams):
+    links_with_prefixes = [] 
+    code_prefixes = set() 
     
-    # 1. Force URL to Player Assists tab
+    try:
+        with open(csv_file_path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                url = row.get('url', '') or row.get('URL') or row.get('link') or ''
+                if 'events/' in url or 'nba' in url:
+                    url_lower = url.lower()
+                    for team in nba_teams:
+                        if team in url_lower:
+                            match = re.search(r'-(\d{6,})$', url)
+                            if match:
+                                six_digit_code = match.group(1)[-8:]
+                                first_5_digits = six_digit_code[:5]
+                                code_prefixes.add(first_5_digits)
+                                links_with_prefixes.append((url, first_5_digits))
+                            break
+    except Exception:
+        return [], set(), None
+    
+    if code_prefixes:
+        target_prefix = max(code_prefixes, key=int)
+        filtered_links = [url for url, prefix in links_with_prefixes if prefix == target_prefix]
+        return list(set(filtered_links)), code_prefixes, target_prefix
+    else:
+        return [], set(), None
+
+async def scrape_single_game(page, base_url, is_first_game=False):
     if "?" in base_url:
         URL = f"{base_url}&tab=player-assists"
     else:
@@ -161,166 +233,110 @@ def scrape_single_game(browser_config, base_url):
 
     game_name = "unknown"
     try:
-        match = re.search(r'/nba/([^/?]+)', URL)
+        match = re.search(r'/nba/([^/?]+)', URL) or re.search(r'/events/([^/?]+)', URL)
         if match: game_name = match.group(1)
     except: pass
 
-    results = [] 
-    log.info(f"Starting scrape: {game_name}")
+    log.info(f"Scraping: {game_name}")
 
     try:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(
-                headless=False,
-                args=browser_config['args'],
-                ignore_default_args=browser_config['ignore_default_args']
-            )
-            context = browser.new_context(
-                locale=browser_config['locale'],
-                timezone_id=browser_config['timezone_id'],
-                geolocation=browser_config['geolocation'],
-                user_agent=browser_config['user_agent'],
-                permissions=["geolocation"],
-                viewport={"width": 1280, "height": 720}
-            )
-            page = context.new_page()
-            aql_page = agentql.wrap(page)
+        await page.goto(URL)
+        await handle_press_and_hold(page)
+        
+        # Warmup sleep
+        wait_time = 6 if is_first_game else random.uniform(2, 4)
+        log.info(f"Waiting {wait_time:.1f}s for page load...")
+        await asyncio.sleep(wait_time)
+        
+        # --- INTERACTION ---
+        await open_assists_accordion(page)
+        await asyncio.sleep(1)
+        await click_show_more(page)
+        await asyncio.sleep(2)
 
-            # Navigate
-            aql_page.goto(URL)
-            page.wait_for_timeout(3000)
-
-            # 2. HANDLE BOT CHECK (Using specific iframe locator)
-            handle_press_and_hold(page)
-            
-            log.info("Waiting for page hydration...")
-            page.wait_for_timeout(5000)
-
-            # 3. OPEN ACCORDIONS (Look for "Player Assists")
-            try:
-                resp = aql_page.query_elements(INTERACTION_QUERY)
-                accordions = getattr(resp, 'market_accordions', [])
-                for acc in accordions:
-                    try:
-                        raw_text = acc.header_text.text_content() if acc.header_text else ""
-                        text = raw_text.lower()
-                    except: text = ""
-
-                    # Specific check for Assists
-                    if "player assists" in text:
-                        if acc.header_element:
-                            try:
-                                acc.header_element.click()
-                                page.wait_for_timeout(300)
-                            except: pass
-            except: pass
-
-            # 4. CLICK SHOW MORE
-            try:
-                resp = aql_page.query_elements(BUTTON_QUERY)
-                if resp.show_more_buttons:
-                    for btn in resp.show_more_buttons:
-                        btn.click()
-                        page.wait_for_timeout(500)
-            except: pass
-            
-            force_click_fallback(page, "Show more")
-            page.wait_for_timeout(3000)
-
-            # 5. EXTRACT DATA
-            data = aql_page.query_data(DATA_QUERY)
-            market_accordions = data.get("market_accordions", [])
-
-            for section in market_accordions:
-                header = section.get("header_text", "")
-                rows = section.get("rows", [])
-
-                if not header: continue
-                
-                # Verify header is assists
-                if "Player Assists" in header:
-                    for r in rows:
-                        p_name = r.get("player_name")
-                        line_val = clean_line(r.get("over_line_label"))
-                        
-                        if p_name and line_val:
-                            results.append({
-                                "game": game_name,
-                                "market": "player assists",
-                                "player": p_name,
-                                "line": line_val,
-                                "odds_over": r.get("over_price"),
-                                "odds_under": r.get("under_price")
-                            })
-            
-            log.info(f" -> Scraped {len(results)} assists from {game_name}")
-            browser.close()
+        # --- EXTRACTION ---
+        results = await extract_data_pure_playwright(page, game_name)
+        log.info(f" -> Found {len(results)} rows.")
+        return results
 
     except Exception as e:
-        log.error(f"Error scraping {game_name}: {e}")
+        log.error(f"Error on {game_name}: {e}")
+        return []
 
-    return results
-
-# --- MAIN ---
-def main():
-    # Setup paths
+# --- ASYNC MAIN ---
+async def async_main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    fanduel_dir = os.path.dirname(script_dir)
-    scraper_dir = os.path.dirname(fanduel_dir)
-    links_path = os.path.join(scraper_dir, 'Links', 'betting_links_fanduel.csv')
-    
-    # 1. Get Valid Links
-    links = filter_nba_links(links_path)
-    log.info(f"Found {len(links)} valid NBA games to process.")
+    links_path = os.path.join(script_dir, '..', '..', 'Links', 'betting_links_fanduel.csv')
+    if not os.path.exists(links_path):
+        links_path = os.path.join(script_dir, 'Links', 'betting_links_fanduel.csv')
 
-    # 2. Config
-    location = random.choice(LOCATIONS)
-    browser_config = {
-        'args': BROWSER_ARGS,
-        'ignore_default_args': BROWSER_IGNORED_ARGS,
-        'locale': "en-US",
-        'timezone_id': location[0],
-        'geolocation': location[1],
-        'user_agent': random.choice(USER_AGENTS)
-    }
+    filtered_links, _, _ = filter_nba_event_links(links_path, nba_teams)
+    log.info(f"Filtered to {len(filtered_links)} games for today.")
 
-    # 3. Thread Pool Execution (Scrape New Data)
-    new_data = []
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        futures = {executor.submit(scrape_single_game, browser_config, url): url for url in links}
-        
-        for future in as_completed(futures):
-            new_data.extend(future.result())
+    if not filtered_links:
+        return
 
-    # 4. Save Logic (Overwrite old Assists, keep others)
+    all_data = []
+
+    log.info("Starting Nodriver (Chrome)...")
+    browser_obj = None
+    try:
+        browser_obj = await n.start(browser_args=BROWSER_ARGS, headless=False)
+        cdp_url = browser_obj.connection.websocket_url
+        log.info(f"Connected to Nodriver at: {cdp_url}")
+
+        async with async_playwright() as p:
+            browser = await p.chromium.connect_over_cdp(cdp_url)
+            context = browser.contexts[0]
+            page = context.pages[0] 
+
+            for i, link in enumerate(filtered_links):
+                log.info(f"Processing {i+1}/{len(filtered_links)}: {link}")
+                is_first = (i == 0)
+                game_data = await scrape_single_game(page, link, is_first_game=is_first)
+                all_data.extend(game_data)
+                
+                if i < len(filtered_links) - 1:
+                    await asyncio.sleep(random.uniform(2.0, 4.0))
+            
+            await browser.close()
+
+    except Exception as e:
+        log.error(f"Execution Error: {e}")
+    finally:
+        if browser_obj:
+            try: browser_obj.stop()
+            except: pass
+
     output_dir = os.path.join(script_dir, '..', '..', 'Odds')
+    if not os.path.exists(output_dir): output_dir = os.path.join(script_dir, 'Odds')
     os.makedirs(output_dir, exist_ok=True)
+    
     output_path = os.path.join(output_dir, 'fanduel_odds.csv')
-
     fieldnames = ["game", "market", "player", "line", "odds_over", "odds_under"]
     
     final_rows = []
-    
-    # Read existing data to preserve OTHER markets
     if os.path.exists(output_path):
         with open(output_path, 'r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for row in reader:
-                # Keep rows that are NOT "player assists"
                 if row.get('market') != 'player assists':
                     final_rows.append(row)
-        log.info(f"Preserved {len(final_rows)} rows from other markets.")
     
-    # Add new Assist data
-    final_rows.extend(new_data)
+    final_rows.extend(all_data)
     
-    # Write everything back
     with open(output_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(final_rows)
 
-    log.info(f"Job Complete. Saved {len(final_rows)} total rows (New Assists: {len(new_data)}) to {output_path}")
+    log.info(f"Done. Saved {len(final_rows)} total rows.")
+
+def main():
+    try:
+        asyncio.run(async_main())
+    except KeyboardInterrupt:
+        pass
 
 if __name__ == "__main__":
     main()
